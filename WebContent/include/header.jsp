@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <link rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -33,32 +34,32 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="store.html">Store</a>
+        <a class="nav-link" href="store.jsp">Store</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Membership
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="registration.html">Sign Up</a>
-          <a class="dropdown-item" href="workshop.html">Workshops</a>
+          <a class="dropdown-item" href="registration.jsp">Sign Up</a>
+          <a class="dropdown-item" href="workshop.jsp">Workshops</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="contact.html">Learn more</a>
+          <a class="dropdown-item" href="contact.jsp">Learn more</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="about.jsp">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="contact.jsp">Contact</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" action="Login">
-      Email:<input class="form-control mr-sm-2" type="email">
-      Password:<input class="form-control mr-sm-2" type="password">
+    <form class="form-inline my-2 my-lg-0 login-form" action="Login">
+      <label>Email:</label><input class="form-control mr-sm-2" type="email">
+      <label>Password:</label><input class="form-control mr-sm-2" type="password">
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Login</button>
     </form>
   </div>
