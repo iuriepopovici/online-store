@@ -9,11 +9,12 @@
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
 <div class="footer container-fluid">
+   <br />
     <div class="row">
       <div class="col-lg-4 text-center">
       </div>
       <div class="col-lg-4 text-center">
-        <a href="index.html">
+        <a href="index.jsp">
           <img src="img/logo/logo_title_720_blue.png"
             alt="Paula's Porcupine Pagoda logo" width="64" height="64">
         </a>

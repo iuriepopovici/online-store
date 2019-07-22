@@ -27,7 +27,7 @@ img {
   color: #c6c3db;
   font-size: 12px; }
 .login-form input[type="email"], .login-form input[type="password"] {
-  max-width: 10px; }
+  min-width: 80px; }
 
 .btn-orange {
   padding: 6pt;
@@ -60,6 +60,7 @@ img {
   background-color: #fefead; }
 
 .news {
+  min-height: 350px;
   border: 2pt solid #d8723b;
   padding: 4pt;
   margin: 4pt;
@@ -69,6 +70,7 @@ img {
     list-style-type: none; }
 
 .store-featured-item {
+  min-height: 256px;
   border: 2pt solid #d8723b;
   padding: 15px;
   border-radius: 20px;

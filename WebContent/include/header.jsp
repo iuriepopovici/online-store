@@ -13,7 +13,7 @@
     <div class="col-lg-4">
     </div>
     <div class="col-lg-4 text-center">
-      <a href="index.html">
+      <a href="index.jsp">
         <img src="img/logo/logo_sans_title_720_blue.png"
           alt="Paula's Porcupine Pagoda logo" width="64" height="64">
       </a>

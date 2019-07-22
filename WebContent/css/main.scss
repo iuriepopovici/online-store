@@ -63,7 +63,7 @@ input[type="search"], textarea{
     font-size: 12px;
   }
   input[type="email"], input[type="password"]{
-    max-width: 10px;
+    min-width: 80px;
   }
 }
 
@@ -104,6 +104,7 @@ input[type="search"], textarea{
 }
 
 .news{
+  min-height: 350px;
   border: $border-orange;
   padding: 4pt;
   margin: 4pt;
@@ -119,6 +120,7 @@ input[type="search"], textarea{
 }
 
 .store-featured-item {
+    min-height: 256px;
     border: $border-orange;
     padding: 15px;
     border-radius: $border-radius;
