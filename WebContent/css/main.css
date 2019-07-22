@@ -29,6 +29,9 @@ img {
 .login-form input[type="email"], .login-form input[type="password"] {
   min-width: 80px; }
 
+.registration label {
+  text-align: right; }
+
 .btn-orange {
   padding: 6pt;
   border: 1pt solid #d8723b;

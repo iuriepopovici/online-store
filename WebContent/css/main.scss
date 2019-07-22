@@ -67,6 +67,12 @@ input[type="search"], textarea{
   }
 }
 
+.registration{
+  label{
+    text-align: right;
+  }
+}
+
 .btn-orange{
   padding: 6pt;
   border: $btn-border-orange;

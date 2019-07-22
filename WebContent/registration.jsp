@@ -22,23 +22,23 @@
       <form class="registration" action="Register" method="post">
         <table>
           <tr>
-            <td>First Name:</td>
+            <td><label>First Name:</label></td>
             <td><input type="text" name="first_name" value=""></td>
           </tr>
           <tr>
-            <td>Last Name:</td>
+            <td><label>Last Name:</label></td>
             <td><input type="text" name="last_name" value=""></td>
           </tr>
           <tr>
-            <td>Phone Number:</td>
+            <td><label>Phone Number:</label></td>
             <td><input type="text" name="phone" value=""></td>
           </tr>
           <tr>
-            <td>Email:</td>
+            <td><label>Email:</label></td>
             <td><input type="text" name="email" value=""></td>
           </tr>
           <tr>
-            <td>Password:</td>
+            <td><label>Password:</label></td>
             <td><input type="text" name="password" value=""></td>
           </tr>
         </table>
