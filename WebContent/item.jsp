@@ -75,7 +75,7 @@
       <img class="store_photo" src="img/merch/tshirt_logo_orange_720.png" alt="orange logo t-shirt">
     </div>
     <div class="col-md-4">
-      <p>This t-shirt is 100% cotton...</p>
+      <p>This t-shirt is 100% cotton.....</p>
     </div>
   </div>
   <div class="row">
@@ -84,5 +84,6 @@
     </div>
   </div>
 </div>
+<jsp:include page="include/footer.jsp" />
 </body>
 </html>
