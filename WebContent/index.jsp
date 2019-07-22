@@ -20,7 +20,9 @@
     <div class="col-lg-4 offset-lg-4 text-center">
       <h1>Paula’s Porcupine Pagoda</h1>
       <h2>Acupuncture Salon and Spa</h2>
-      <button class="btn-orange" type="submit">JOIN</button>
+      <a href="registration.jsp">
+      	  <button class="btn-orange" type="submit">REGISTER</button>
+      </a>
       <p>Register as a Gold Member today and receive a complimentary T-shirt!</p>
     </div>
   </div>

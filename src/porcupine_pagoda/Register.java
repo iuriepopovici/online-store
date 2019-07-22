@@ -28,7 +28,8 @@ public class Register extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		response.sendRedirect("registration.jsp");
 	}
 
 	/**
@@ -36,6 +37,7 @@ public class Register extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		response.setContentType("text/html");
 		String first_name = request.getParameter("first_name");
 		String last_name = request.getParameter("last_name");
 		String phone = request.getParameter("phone");

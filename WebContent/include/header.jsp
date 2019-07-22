@@ -49,26 +49,33 @@
         <a class="nav-link" href="contact.jsp">Contact</a>
       </li>
     </ul>
-    <!-- 
-    <form class="form-inline my-2 my-lg-0 login-form" action="Login">
-      <label>Email: </label>
-      <input class="form-control mr-sm-2" type="email" name="login_email">
-      <label>Password: </label>
-      <input class="form-control mr-sm-2" type="password" name="login_password">
-      <input class="btn btn-outline-primary my-2 my-sm-0" type="submit" name="login_submit" value="Login">
-    </form>
-     -->
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item">
-      	<a class="nav-link" href="registration.jsp">
-      		<span class="glyphicon glyphicon-user"></span> Sign Up
-      	</a>
-      </li>
-      <li class="nav-item">
-      	<a class="nav-link" href="login.jsp">
-      		<span class="glyphicon glyphicon-log-in"></span> Login
-      	</a>
-      </li>
-    </ul>
+    <% if(session.getAttribute("email") != null) {%>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="nav-item">
+	      	<a class="nav-link" href="#">
+	      		<span class="glyphicon glyphicon-user"></span> ${email}
+	      	</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="logout.jsp">
+	      		<span class="glyphicon glyphicon-log-in"></span> Logout
+	      	</a>
+	      </li>
+	    </ul>
+	 <% } else { %>
+    
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="nav-item">
+	      	<a class="nav-link" href="registration.jsp">
+	      		<span class="glyphicon glyphicon-user"></span> Register
+	      	</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="login.jsp">
+	      		<span class="glyphicon glyphicon-log-in"></span> Login
+	      	</a>
+	      </li>
+	    </ul>
+	   <% } %>
   </div>
 </nav>

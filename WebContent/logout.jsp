@@ -12,31 +12,17 @@
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 <body>
-
 <jsp:include page="include/header.jsp" />
-
-
-<div class="container-fluid">
-  <br>
-  <div class="row">
-    <div class="col-md-12  text-center">
-      <h1>Contact</h1>
-	  <h3>Address:</h3>
-      <p>312 N Randolph St, Chicago, IL, USA, 60438</p>
-      <h3>Phone:</h3>
-      <p>312-555-3923</p>
-
-      <h3>E-mail:</h3>
-      <p>contact@paulaporcupinepagoda.com</p>
-      
-    </div>
-  </div>
-
-</div>
-
+<h3>You are logged in as ${email}. 
 <br />
+We are sorry to see you leave.</h3>
+<br /><br />
+<h3>Are you sure you want to logout?</h3>
 
- <%@ include file="include/footer.jsp" %>
- 
+<form action="Logout">
+	<input type="submit" value="Logout">
+</form>
+
+<jsp:include page="include/footer.jsp" />
 </body>
 </html>
