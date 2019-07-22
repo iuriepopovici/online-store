@@ -22,33 +22,38 @@
     </div>
 
     <br>
-        <div class="row store-featured">
-          <div class="col-md-12 store_featured">
+        <div class="row store-featured text-center">
+          <div class="col-md-3">
               <div class="text-center store-featured-item">
                 <h4>Mug</h4>
                 <img src="img/merch/mug_logo_blue_720.png" alt="blue logo mug" width="128" height="128">
                 <p>Pefect for your morning coffee!</p>
               </div>
+           </div>
+           <div class="col-md-3">
               <div class="text-center store-featured-item">
                 <h4>T-Shirt</h4>
                 <img src="img/merch/tshirt_logo_orange_720.png" alt="orange logo t-shirt" width="128" height="128">
                 <p>Sizes for everyone!</p>
               </div>
+           </div>
+           <div class="col-md-3">
               <div class="text-center store-featured-item">
                 <h4>Cap</h4>
                 <img src="img/merch/cap_logo_blue_720.png" alt="blue logo cap" width="128" height="128">
                 <p>Get your porcupine gear here!</p>
               </div>
+           </div>
+           <div class="col-md-3">
               <div class="text-center store-featured-item">
                 <h4>T-Shirt</h4>
                 <img src="img/merch/tshirt_logo_orange_720.png" alt="orange logo t-shirt" width="128" height="128">
                 <p>Sizes for everyone!</p>
               </div>
-          </div>
-        </div>
+           </div>
+         </div>
+      </div>
   </div>
-
-</div>
 
 <br />
 <%@ include file="include/footer.jsp" %>

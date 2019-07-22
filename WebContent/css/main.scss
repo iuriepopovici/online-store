@@ -116,16 +116,11 @@ input[type="search"], textarea{
 }
 
 .store-featured{
-  overflow-x: auto;
 }
 
 .store-featured-item {
-    float: left;
-    height: 256px;
-    width: 256px;
     border: $border-orange;
-    padding: 4pt;
-    margin: 4pt;
+    padding: 15px;
     border-radius: $border-radius;
     background-color: $accent-color;
 }

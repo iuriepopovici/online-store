@@ -68,16 +68,9 @@ img {
   .news ul {
     list-style-type: none; }
 
-.store-featured {
-  overflow-x: auto; }
-
 .store-featured-item {
-  float: left;
-  height: 256px;
-  width: 256px;
   border: 2pt solid #d8723b;
-  padding: 4pt;
-  margin: 4pt;
+  padding: 15px;
   border-radius: 20px;
   background-color: #c6c3db; }
 

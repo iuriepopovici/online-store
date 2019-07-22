@@ -39,16 +39,8 @@
       <li class="nav-item">
         <a class="nav-link" href="store.jsp">Store</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Membership
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="registration.jsp">Sign Up</a>
-          <a class="dropdown-item" href="workshop.jsp">Workshops</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="contact.jsp">Learn more</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" href="workshop.jsp">Workshops</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="about.jsp">About</a>
