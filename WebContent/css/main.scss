@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5{
   color: $text-color;
 }
 
-p, a, button{
+p, a, button, label{
   font-family: $montserrat;
   color: $text-color;
 }
@@ -55,6 +55,16 @@ input[type="search"], textarea{
 
 .navbar{
   background-color: $secondary-color;
+}
+
+.login-form{
+  label{
+    color: $accent-color;
+    font-size: 12px;
+  }
+  input[type="email"], input[type="password"]{
+    max-width: 10px;
+  }
 }
 
 .btn-orange{
