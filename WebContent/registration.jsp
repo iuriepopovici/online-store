@@ -17,9 +17,9 @@
 <div class="container-fluid">
   <br>
   <div class="row">
-    <div class="col-md-4 offset-md-4  text-center">
+    <div class="col-md-4 offset-md-4">
       <h1>Registration</h1>
-      <form class="registration" action="Register" method="post">
+      <form class="registration-form" action="Register" method="post">
         <table>
           <tr>
             <td><label>First Name:</label></td>
@@ -42,7 +42,7 @@
             <td><input type="text" name="password" value=""></td>
           </tr>
         </table>
-        <input type="submit" name="submit_registration" value="Submit">
+        <input class="btn btn-orange" type="submit" name="submit_registration" value="Submit">
       </form>
     </div>
   </div>

@@ -23,14 +23,16 @@ img {
 .navbar {
   background-color: #f3915c; }
 
-.login-form label {
-  color: #c6c3db;
-  font-size: 12px; }
-.login-form input[type="email"], .login-form input[type="password"] {
+.login-form label, .registration-form label {
+  color: #12111d;
+  font-size: 12px;
+  text-align: left;
+  padding-right: 5px; }
+.login-form input[type="email"], .login-form input[type="password"], .registration-form input[type="email"], .registration-form input[type="password"] {
   min-width: 80px; }
-
-.registration label {
-  text-align: right; }
+.login-form input[type="submit"], .registration-form input[type="submit"] {
+  width: 80px;
+  margin: 5px auto; }
 
 .btn-orange {
   padding: 6pt;
