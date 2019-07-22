@@ -20,7 +20,7 @@
         </a>
         <h5>Contact</h5>
         <p>Phone: 555-555-1234</p>
-        <p>Email: contact@paulaPorcupinePagoda.com</p>
+        <p>Email: <a href="mailto:amgonz74@neiu.edu">contact@paulasPorcupinePagoda.com</a></p>
       </div>
       <div class="col-lg-4">
       </div>

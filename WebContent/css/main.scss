@@ -35,6 +35,10 @@ p, a, button, label{
   color: $text-color;
 }
 
+a{
+  text-decoration: none;
+}
+
 img{
   border-radius: $img-border-radius;
 }
@@ -127,9 +131,10 @@ input[type="search"], textarea{
 }
 
 .store-featured-item {
-    min-height: 256px;
+    min-height: 300px;
     border: $border-orange;
     padding: 15px;
+    margin: 10px 0px;
     border-radius: $border-radius;
     background-color: $accent-color;
 }

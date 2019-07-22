@@ -11,6 +11,9 @@ p, a, button, label {
   font-family: "Montserrat", sans-serif;
   color: #12111d; }
 
+a {
+  text-decoration: none; }
+
 img {
   border-radius: 10px; }
 
@@ -75,9 +78,10 @@ img {
     list-style-type: none; }
 
 .store-featured-item {
-  min-height: 256px;
+  min-height: 300px;
   border: 2pt solid #d8723b;
   padding: 15px;
+  margin: 10px 0px;
   border-radius: 20px;
   background-color: #c6c3db; }
 
