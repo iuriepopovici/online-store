@@ -72,7 +72,7 @@
   <div class="row">
     <div class="col-md-4 offset-md-4  text-center">
       <h1>Registration</h1>
-      <form class="registration" action="sucessRegistration.html" method="post">
+      <form class="registration" action="Register" method="post">
         <table>
           <tr>
             <td>First Name:</td>
@@ -91,20 +91,8 @@
             <td><input type="text" name="email" value=""></td>
           </tr>
           <tr>
-            <td>Address 1:</td>
-            <td><input type="text" name="address 1" value=""></td>
-          </tr>
-          <tr>
-            <td>Address 2:</td>
-            <td><input type="text" name="address 2" value=""></td>
-          </tr>
-          <tr>
-            <td>City:</td>
-            <td><input type="text" name="city" value=""></td>
-          </tr>
-          <tr>
-            <td>Zip Code:</td>
-            <td><input type="text" name="zip_code" value=""></td>
+            <td>Password:</td>
+            <td><input type="text" name="password" value=""></td>
           </tr>
         </table>
         <input type="submit" name="submit_registration" value="Submit">

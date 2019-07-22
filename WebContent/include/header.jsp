@@ -56,9 +56,10 @@
         <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    <form class="form-inline my-2 my-lg-0" action="Login">
+      Email:<input class="form-control mr-sm-2" type="email">
+      Password:<input class="form-control mr-sm-2" type="password">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Login</button>
     </form>
   </div>
 </nav>
