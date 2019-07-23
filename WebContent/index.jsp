@@ -23,7 +23,7 @@
       <a href="registration.jsp">
       	  <button class="btn-orange" type="submit">REGISTER</button>
       </a>
-      <p>Register as a Gold Member today and receive a complimentary T-shirt!</p>
+      <p>Register and get access to our workshops!</p>
     </div>
   </div>
   <br>
@@ -38,16 +38,17 @@
       <div class="col-md-4 text-center">
         <div class="news">
           <h4>News</h4>
-          <ul>
-            <li>
-              <p>  Sign up for out for one of workshops!</p>
+              <p>Free acupuncture workshops!</p>
+              <p>You need to be a member!</p> 
+              <p>Click below to register for a free account or to sign up for a workshop!</p>
+              <p>Cofee and refreshments will be served!</p>
               <button class="btn-orange" type="submit">SIGN UP</button>
-            </li>
-            <li>
+            
+            <!-- <li>
               <p>Subscribe to our newsletter!</p>
               <button class="btn-orange" type="submit">SUBSCRIBE</button>
-            </li>
-          </ul>
+            </li> -->
+          
         </div>
       </div>
     </div>
