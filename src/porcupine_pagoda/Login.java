@@ -55,7 +55,16 @@ public class Login extends HttpServlet {
 				
 				ResultSet rs = creds.executeQuery();
 				if(rs.next()) {
-					HttpSession session = request.getSession();			
+					HttpSession session = request.getSession();
+					System.out.println("current email : "+email);
+					System.out.println("past email: "+session.getAttribute("emailForCart"));
+				
+					// If new user logs in, delete previous user session.
+					if(session.getAttribute("emailForCart") != null && !session.getAttribute("emailForCart").equals(email)) {
+						session.invalidate();
+						session = request.getSession(true);	
+					}
+					
 					session.setAttribute("email", email);
 					creds.close();
 					conn.close();

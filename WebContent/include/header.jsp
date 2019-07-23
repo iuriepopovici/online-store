@@ -62,7 +62,7 @@
 	      <li class="nav-item">
 	      	<a class="nav-link" href="viewCart.jsp">
 	      		<img src="img/photo/cart.png" alt="shopping cart image">
-	      		<span class="glyphicon glyphicon-log-in"></span>${totalItems}
+	      		<span class="glyphicon glyphicon-log-in"></span>
 	      	</a>
 	      </li>
 	      <li class="nav-item">
@@ -87,7 +87,7 @@
 	      <li class="nav-item">
 	      	<a class="nav-link" href="viewCart.jsp">
 	      		<img src="img/photo/cart.png" alt="shopping cart image">
-	      		<span class="glyphicon glyphicon-log-in"></span>${totalItems}
+	      		<span class="glyphicon glyphicon-log-in"></span>
 	      	</a>
 	      </li>
 	      

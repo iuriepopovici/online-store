@@ -29,6 +29,7 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
+		session.setAttribute("emailForCart", session.getAttribute("email"));
 		session.removeAttribute("email");
 		//session.invalidate();
 		response.sendRedirect("index.jsp");

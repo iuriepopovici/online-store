@@ -31,8 +31,12 @@ if(session.getAttribute("cart") != null) {
 %>		
 			<%= cart.get(i).getItemName() %>
 <br />
-<% }}}
-else {
+<% 
+}}   
+%>
+<br /><h4><%= totalItems %> items in your cart so far!</h4>
+<%
+	} else {
 %>
 <h4>Your shopping cart is empty!</h4>
 <%} %>

@@ -54,6 +54,12 @@ public class Register extends HttpServlet {
 		if(email != null && !email.trim().equals("")) {
 			HttpSession session = request.getSession();			
 			
+			// If new user registers, delete previous user session.
+			if(session.getAttribute("emailForCart") != null && !session.getAttribute("emailForCart").equals(email)) {
+				session.invalidate();
+				session = request.getSession(true);	
+			}
+			
 			session.setAttribute("first_name", first_name);
 			session.setAttribute("last_name", last_name);
 			session.setAttribute("phone", phone);
