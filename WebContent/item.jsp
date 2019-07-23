@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,15 +14,34 @@
 
 <jsp:include page="include/header.jsp" />
 
+<%@ page import="java.util.Arrays" %>
+
+<%
+String product = "Cap";
+String imgSrc = "img/merch/Cap.png";
+String imgAlt = "Logo Cap";
+String[] availProds = {"Cap", "Mug", "T-Shirt"};
+
+if(request.getParameter("value") != null){
+	if (Arrays.asList(availProds).contains(request.getParameter("value"))) {
+		product = request.getParameter("value");
+		imgSrc = "img/merch/" + product + ".png";
+		imgAlt = "Logo " + product;
+	}
+	else {
+		response.sendRedirect("store.jsp");
+	} 
+} 
+else {
+	response.sendRedirect("store.jsp");
+}
+%>
 <div class="container-fluid">
   <br>
   <div class="row">
     <div class="col-md-4  text-center">
-      <h1>T-shirt</h1>
-      <img class="store_photo" src="img/merch/tshirt_logo_orange_720.png" alt="orange logo t-shirt">
-    </div>
-    <div class="col-md-4">
-      <p>This t-shirt is 100% cotton.....</p>
+      <h1><%= product %></h1>
+      <img class="store_photo" src=<%= imgSrc %> alt=<%= imgAlt %>>
     </div>
   </div>
   <div class="row">
