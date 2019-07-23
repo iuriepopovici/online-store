@@ -1,5 +1,6 @@
 package porcupine_pagoda;
 
+import java.io.PrintWriter;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,7 +43,8 @@ public class Login extends HttpServlet {
 		response.setContentType("text/html");
 		String email = request.getParameter("login_email");
 		String password = request.getParameter("login_password");
-		
+		PrintWriter out = response.getWriter();
+
 		if(email != null && !email.trim().equals("")) {
 			
 			try {
@@ -69,7 +71,6 @@ public class Login extends HttpServlet {
 		}
 		else {
 			response.sendRedirect("login.jsp");
-			
 		}
 	}
 }

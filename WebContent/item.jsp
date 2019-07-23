@@ -46,7 +46,10 @@ else {
   </div>
   <div class="row">
     <div class="col-md-4  text-center">
-      <button class="btn-orange" type="submit">Add to cart</button>
+    <form action="Cart" method="post" id="adToCartForm">
+		<input type="text" name="product" value=<%= product %> />
+    </form>
+     <button class="btn-orange" form="adToCartForm" type="submit" value="Add to cart">Add to cart</button>
     </div>
   </div>
 </div>
