@@ -47,14 +47,16 @@ public class ProcessCart extends HttpServlet {
 		response.setContentType("text/html");
 		String product = request.getParameter("product");
 		HttpSession session = request.getSession();
+		session.setMaxInactiveInterval(7200);
 		
 		List<CartItem> cart = (List<CartItem>)session.getAttribute("cart");
-		if(cart==null) {
+		if(cart == null) {
 			cart = new ArrayList<CartItem>();
 		}
-		cart.add(new CartItem(product, 0,1,1));
+		cart.add(new CartItem(product, 0, 1, 1));
 		
 		session.setAttribute("cart", cart);
+		request.getRequestDispatcher("viewCart.jsp").forward(request, response);
 	}
 	
 

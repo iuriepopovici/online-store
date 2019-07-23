@@ -14,16 +14,19 @@
 
 <jsp:include page="include/header.jsp" />
 
-<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.*" %>
 
 <%
 String product = "Cap";
 String imgSrc = "img/merch/Cap.png";
 String imgAlt = "Logo Cap";
-String[] availProds = {"Cap", "Mug", "T-Shirt"};
+Vector<String> availProds = new Vector<String>();
+availProds.add("Cap");
+availProds.add("Mug");
+availProds.add("T-Shirt");
 
 if(request.getParameter("value") != null){
-	if (Arrays.asList(availProds).contains(request.getParameter("value"))) {
+	if (availProds.contains(request.getParameter("value"))) {
 		product = request.getParameter("value");
 		imgSrc = "img/merch/" + product + ".png";
 		imgAlt = "Logo " + product;
@@ -46,14 +49,13 @@ else {
   </div>
   <div class="row">
     <div class="col-md-4  text-center">
-    <form action="Cart" method="post" id="adToCartForm">
-		<input type="text" name="product" value=<%= product %> />
+    <form action="ProcessCart" method="post" id="adToCartForm">
+		<input type="hidden" name="product" value=<%= product %> />
     </form>
      <button class="btn-orange" form="adToCartForm" type="submit" value="Add to cart">Add to cart</button>
     </div>
   </div>
 </div>
-
 <br />
 
 <%@ include file="include/footer.jsp" %>

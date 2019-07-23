@@ -60,6 +60,12 @@
 	      	</a>
 	      </li>
 	      <li class="nav-item">
+	      	<a class="nav-link" href="viewCart.jsp">
+	      		<img src="img/photo/cart.png" alt="shopping cart image">
+	      		<span class="glyphicon glyphicon-log-in"></span>${totalItems}
+	      	</a>
+	      </li>
+	      <li class="nav-item">
 	      	<a class="nav-link" href="logout.jsp">
 	      		<span class="glyphicon glyphicon-log-in"></span> Logout
 	      	</a>
@@ -78,6 +84,13 @@
 	      		<span class="glyphicon glyphicon-log-in"></span> Login
 	      	</a>
 	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="viewCart.jsp">
+	      		<img src="img/photo/cart.png" alt="shopping cart image">
+	      		<span class="glyphicon glyphicon-log-in"></span>${totalItems}
+	      	</a>
+	      </li>
+	      
 	    </ul>
 	   <% } %>
   </div>

@@ -54,21 +54,21 @@
     </div>
 <br>
     <div class="row store-featured text-center">
-      <div class="col-md-3">
+      <div class="col-md-4">
           <div class="text-center store-featured-item">
             <h4>Mug</h4>
             <img src="img/merch/Mug.png" alt="blue logo mug" width="128" height="128">
             <p>Pefect for your morning coffee!</p>
           </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
           <div class="text-center store-featured-item">
             <h4>T-Shirt</h4>
             <img src="img/merch/T-Shirt.png" alt="orange logo t-shirt" width="128" height="128">
             <p>Limited edition design!</p>
           </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
           <div class="text-center store-featured-item">
             <h4>Cap</h4>
             <img src="img/merch/Cap.png" alt="blue logo cap" width="128" height="128">
