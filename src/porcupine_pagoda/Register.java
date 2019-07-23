@@ -1,12 +1,16 @@
 package porcupine_pagoda;
 
 import java.io.IOException;
+import java.sql.Connection; 
+import java.sql.PreparedStatement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import porcupine_pagoda.DBConnect; 
+
 
 /**
  * Servlet implementation class Register
@@ -51,13 +55,32 @@ public class Register extends HttpServlet {
 			session.setAttribute("last_name", last_name);
 			session.setAttribute("phone", phone);
 			session.setAttribute("email", email);
+			
+			try {
+				Connection conn = DBConnect.initDB();
+				PreparedStatement ins = conn.prepareStatement("insert into Customer values(?, ?, ?, ?, ?, ?)");
+				ins.setInt(1, 0);
+				ins.setString(2, password);
+				ins.setString(3, first_name);
+				ins.setString(4, last_name);
+				ins.setString(5, phone);
+				ins.setString(6, email);
+				
+				ins.executeUpdate();
+				
+				ins.close();
+				conn.close();
+				request.getRequestDispatcher("successRegistration.jsp").forward(request, response);
+
 		
-			request.getRequestDispatcher("successRegistration.jsp").forward(request, response);
+			} catch (Exception e) {
+				System.err.println("Database Connection Failed");
+				e.printStackTrace();
+			}
+			
 		}
 		else {
 			response.sendRedirect("registration.jsp");
 		}
-		
 	}
-
 }
