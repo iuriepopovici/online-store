@@ -13,15 +13,17 @@
 </head>
 <body>
 <jsp:include page="include/header.jsp" />
-<h3>You are logged in as ${email}. 
-<br />
-We are sorry to see you leave.</h3>
-<br /><br />
-<h3>Are you sure you want to logout?</h3>
+<% if(session.getAttribute("email") != null) { %>
+	<h3>You are logged in as ${email}. 
+	<br />
+	We are sorry to see you leave.</h3>
+	<br /><br />
+	<h3>Are you sure you want to logout?</h3>
 
 <form action="Logout">
 	<input type="submit" value="Logout">
 </form>
+<% } %>
 
 <jsp:include page="include/footer.jsp" />
 </body>
