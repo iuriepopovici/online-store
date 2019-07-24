@@ -28,30 +28,45 @@
          <div class="col-md-4">
            <div class="store-featured-item">
                 <h4>T-Shirt</h4>
-	                <a href="item.jsp?value=T-Shirt">
-	                	<img src="img/merch/T-Shirt.png" alt="logo t-shirt" width="128" height="128">
-	                </a>
+                    <img src="img/merch/T-Shirt.png" alt="logo t-shirt" width="128" height="128">
+                	<form action="item.jsp" method="post">
+                		<input type="hidden" name="product" value="T-Shirt"/>
+                		<input type="hidden" name="price" value="$25"/>
+                		<input type="hidden" name="src" value="img/merch/T-Shirt.png"/>
+                		<input type="submit" value="View Item">
+                	</form>
+	                <p>$25</p>
                 <p>Limited edition design!</p>
             </div>
           </div>
           <div class="col-md-4">
-              <div class="store-featured-item">
+           <div class="store-featured-item">
                 <h4>Cap</h4>
-                <a href="item.jsp?value=Cap">
-                	<img src="img/merch/Cap.png" alt="logo cap" width="128" height="128">
-                </a>
+                    <img src="img/merch/Cap.png" alt="logo cap" width="128" height="128">
+                	<form action="item.jsp" method="post">
+                		<input type="hidden" name="product" value="Cap"/>
+                		<input type="hidden" name="price" value="$15"/>
+                		<input type="hidden" name="src" value="img/merch/Cap.png"/>
+                		<input type="submit" value="View Item">
+                	</form>
+	                <p>$15</p>
                 <p>Get your porcupine gear here!</p>
-              </div>
-           </div>
-           <div class="col-md-4">
-            <div class="store-featured-item">
-                <h4>Mug</h4>
-                <a href="item.jsp?value=Mug">
-            		<img src="img/merch/Mug.png" alt="logo mug" width="128" height="128">
-            	</a>
-                <p>Perfect for your morning coffee!</p>
             </div>
-         </div>
+          </div>
+           <div class="col-md-4">
+           	  <div class="store-featured-item">
+                <h4>Mug</h4>
+                    <img src="img/merch/Mug.png" alt="logo t-shirt" width="128" height="128">
+                	<form action="item.jsp" method="post">
+                		<input type="hidden" name="product" value="Mug"/>
+                		<input type="hidden" name="price" value="$5"/>
+                		<input type="hidden" name="src" value="img/merch/Mug.png"/>
+                		<input type="submit" value="View Item">
+                	</form>
+	                <p>$5</p>
+                <p>Perfect for your morning cofee!</p>
+            </div>
+          </div>
       </div><!--  row  -->
       
   </div>

@@ -25,9 +25,9 @@ availProds.add("Cap");
 availProds.add("Mug");
 availProds.add("T-Shirt");
 
-if(request.getParameter("value") != null){
-	if (availProds.contains(request.getParameter("value"))) {
-		product = request.getParameter("value");
+if(request.getParameter("product") != null){
+	if (availProds.contains(request.getParameter("product"))) {
+		product = request.getParameter("product");
 		imgSrc = "img/merch/" + product + ".png";
 		imgAlt = "Logo " + product;
 	}
