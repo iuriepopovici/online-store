@@ -58,6 +58,11 @@
       </div>
     </div>
 <br>
+	<div class="row">
+    	<div class="col-md-12  text-center">
+      		<h1>Head to our online store for the following items:</h1>
+    	</div>
+  	</div>
     <div class="row store-featured text-center">
       <div class="col-md-4">
           <div class="text-center store-featured-item">

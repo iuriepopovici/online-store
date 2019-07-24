@@ -20,7 +20,7 @@
   <br>
   <div class="row">
     <div class="col-md-12  text-center">
-      <h1>Contact</h1>
+      <h1>Contact us</h1>
       
       <h3>Phone:</h3>
       <p><a href="tel:+1-773-715-3393">312-219-9999</a></p>

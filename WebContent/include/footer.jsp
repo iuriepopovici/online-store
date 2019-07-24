@@ -18,7 +18,7 @@
           <img src="img/logo/logo_title_720_blue.png"
             alt="Paula's Porcupine Pagoda logo" width="64" height="64">
         </a>
-        <h5>Contact</h5>
+        <h5>Contact us</h5>
         <p>Phone: 555-555-1234</p>
         <p>Email: <a href="mailto:amgonz74@neiu.edu">contact@paulasPorcupinePagoda.com</a></p>
       </div>

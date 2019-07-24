@@ -18,14 +18,14 @@
   <br>
   <div class="row">
     <div class="col-md-12  text-center">
-      <h1>Store</h1>
+      <h1>STORE</h1>
     </div>
   </div>
 
     <br>
 
    <div class="row store-featured text-center">
-         <div class="col-md-3">
+         <div class="col-md-4">
            <div class="store-featured-item">
                 <h4>T-Shirt</h4>
 	                <a href="item.jsp?value=T-Shirt">
@@ -34,7 +34,7 @@
                 <p>Limited edition design!</p>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
               <div class="store-featured-item">
                 <h4>Cap</h4>
                 <a href="item.jsp?value=Cap">
@@ -43,7 +43,7 @@
                 <p>Get your porcupine gear here!</p>
               </div>
            </div>
-           <div class="col-md-3">
+           <div class="col-md-4">
             <div class="store-featured-item">
                 <h4>Mug</h4>
                 <a href="item.jsp?value=Mug">

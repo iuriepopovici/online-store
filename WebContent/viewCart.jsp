@@ -17,7 +17,9 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 
-<h3>SHOPPING CART</h3><br />
+<br /><h3 class="col-md-12 text-center">SHOPPING CART</h3><br />
+<div class="container-fluid">
+   <div class="row store-featured text-center">
 
 <% 
 int totalItems = 0;
@@ -30,23 +32,31 @@ if(session.getAttribute("cart") != null) {
 			session.setAttribute("totalItems", totalItems);
 			src = "<img src = 'img/merch/" + cart.get(i).getItemName() + ".png'";
 %>		
-			<% out.println(src); %>
-			<br />
-			<%= cart.get(i).getItemName() %>
-			<br />
-			
+		
+
+         <div class="col-md-3">
+            <div class="store-featured-item">
+                <h4><%= cart.get(i).getItemName() %></h4>
+                <a href="item.jsp?value=T-Shirt">
+                	<% out.println(src); %>
+                </a>
+            </div>
+        </div>
+     
 <br />
-<% 
-}} 
 
-%>
+<% }} %>
+	</div><!--  row  -->
+</div>			
 
-<br /><h4> Nb of items in your cart so far: <%= totalItems %></h4>
-<%
-} else {
-%>
-<h4>Your shopping cart is empty!</h4>
-<%} %>
+<br /><h4 class="col-md-12 text-center"> Nb of items in your cart so far: <%= totalItems %></h4>
+
+<% } else { %>
+
+	<h4 class="col-md-12 text-center">Your shopping cart is empty!</h4>
+
+<% } %>
+
 <%@ include file="include/footer.jsp" %>
 </body>
 </html>
