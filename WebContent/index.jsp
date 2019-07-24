@@ -44,11 +44,13 @@
         <div class="news">
           <h4>News</h4>
               <p>Free acupuncture workshops!</p>
-              <p>You need to be a member!</p> 
-              <p>Click below to register for a free account or to sign up for a workshop!</p>
-              <p>Cofee and refreshments will be served!</p>
-              <button class="btn-orange" type="submit">SIGN UP</button>
-            
+              <p>Don't miss this opportunity!</p> 
+              <p>Coffee and refreshments will be served!</p>
+              <p>To sign up, click the button below. You will be able to choose your preferred topic and date.</p>
+              <a href="workshop.jsp">
+              	   <button class="btn-orange" type="submit">SIGN UP</button>
+              </a>
+              
             <!-- <li>
               <p>Subscribe to our newsletter!</p>
               <button class="btn-orange" type="submit">SUBSCRIBE</button>
