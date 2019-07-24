@@ -20,10 +20,17 @@
       <h1>About</h1>
 
       <h3>Paula's Porcupine Pagoda</h3>
-      <p>In 1996, Paula...</p>
+      <p>Paula’s Porcupine Pagoda is an Acupuncture 
+      Salon located inside a traditional Japanese Pagoda. 
+      Paula Johnson is our founder. 
+      In 1992, Paula’s home was devastated by the flood that affected the greater woodland area. 
+      However, while looking for a new home for herself, 
+      she realized hundreds of porcupines in the area had been displaced. 
+      She decided to help them. She founded this salon in 1993. We help people get rid of pain, 
+      but we also sell porcupine themed merchandise to our customers. 
+      All proceedings go to helping an endangered species of porcupine, 
+      called Erethizon Dorsatum. </p>
 		
-      <h3>Paula</h3>
-      <p>Founder...</p>
       <h3>About Acupuncture</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sXxgM818YvU?start=4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      <br /><br /><br />
       <h3>About Porcupuncture :-)</h3>

@@ -19,7 +19,7 @@
   <div class="row homeFeature">
     <div class="col-lg-4 offset-lg-4 text-center">
       <h1>Paula's Porcupine Pagoda</h1>
-      <h2>Acupuncture Salon and Spa</h2>
+      <h2>Acupuncture Salon</h2>
       <% if(session.getAttribute("email") == null) {%>
       <a href="registration.jsp">
       	  <button class="btn-orange" type="submit">REGISTER</button>
@@ -34,7 +34,10 @@
         <div class="why_choose_us">
           <h4>An exceptional experience...</h4>
           <img src="img/photo/sm_pagoda_236_177.jpg" alt="Pagoda image">
-          <p>The certified staff at Paula's Pocupine Pagoda will...</p>
+          <h6>Our certified employees provide the following services: </h6>
+          <h6>Acupuncture/Masage Session (90 minutes): $120 </h6>
+          <h6>Cupping (30 minutes): $45 </h6>
+          <h6>Follow-Up Acupuncture Session (60 minutes): $80 </h6>
         </div>
       </div>
       <div class="col-md-4 text-center">

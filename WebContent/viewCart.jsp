@@ -17,26 +17,33 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 
-<h3>SHOPPING CART</h3>
+<h3>SHOPPING CART</h3><br />
 
 <% 
 int totalItems = 0;
-
+String src = "";
 if(session.getAttribute("cart") != null) {
 	ArrayList<CartItem> cart = (ArrayList<CartItem>)session.getAttribute("cart");
 	for(int i=0; i < cart.size(); i++) {
 		if(cart != null && cart.get(i) != null) {
 			totalItems += cart.get(i).getNbItems();
 			session.setAttribute("totalItems", totalItems);
+			src = "<img src = 'img/merch/" + cart.get(i).getItemName() + ".png'";
 %>		
+			<% out.println(src); %>
+			<br />
 			<%= cart.get(i).getItemName() %>
+			<br />
+			
 <br />
 <% 
-}}   
+}} 
+
 %>
-<br /><h4><%= totalItems %> items in your cart so far!</h4>
+
+<br /><h4> Nb of items in your cart so far: <%= totalItems %></h4>
 <%
-	} else {
+} else {
 %>
 <h4>Your shopping cart is empty!</h4>
 <%} %>

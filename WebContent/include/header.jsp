@@ -21,7 +21,7 @@
           alt="Paula's Porcupine Pagoda logo" width="64" height="64">
       </a>
       <h3>Paula's Porcupine Pagoda</h3>
-      <h5>Acupuncture Salon and Spa</h5>
+      <h5>Acupuncture Salon</h5>
     </div>
     <div class="col-lg-4">
     </div>
@@ -62,7 +62,7 @@
 	      <li class="nav-item">
 	      	<a class="nav-link" href="viewCart.jsp">
 	      		<img src="img/photo/cart.png" alt="shopping cart image">
-	      		<span class="glyphicon glyphicon-log-in"></span>
+	      		<span class="glyphicon glyphicon-log-in"></span>Cart
 	      	</a>
 	      </li>
 	      <li class="nav-item">
@@ -87,7 +87,7 @@
 	      <li class="nav-item">
 	      	<a class="nav-link" href="viewCart.jsp">
 	      		<img src="img/photo/cart.png" alt="shopping cart image">
-	      		<span class="glyphicon glyphicon-log-in"></span>
+	      		<span class="glyphicon glyphicon-log-in"></span>Cart
 	      	</a>
 	      </li>
 	      
