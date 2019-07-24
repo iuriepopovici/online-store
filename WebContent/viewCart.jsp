@@ -23,34 +23,49 @@
 
 <% 
 int totalItems = 0;
+int totalPrice = 0;
+
 String src = "";
 if(session.getAttribute("cart") != null) {
 	ArrayList<CartItem> cart = (ArrayList<CartItem>)session.getAttribute("cart");
 	for(int i=0; i < cart.size(); i++) {
 		if(cart != null && cart.get(i) != null) {
 			totalItems += cart.get(i).getNbItems();
+			totalPrice += cart.get(i).getItemPrice();
 			session.setAttribute("totalItems", totalItems);
-			src = "<img src = 'img/merch/" + cart.get(i).getItemName() + ".png'";
+			src = "<img src = 'img/merch/" + cart.get(i).getItemName() + ".png'>";
 %>		
 		
 
          <div class="col-md-3">
             <div class="store-featured-item">
                 <h4><%= cart.get(i).getItemName() %></h4>
-                <a href="item.jsp?value=T-Shirt">
-                	<% out.println(src); %>
-                </a>
+                <% out.println(src); %>
+                <form action="item.jsp" method="post">
+         			<input type="hidden" name="product" value="<%= cart.get(i).getItemName() %>"/>
+         			<input type="hidden" name="price" value="<%= cart.get(i).getItemPrice() %>"/>
+         		
+         			<input type="submit" value="View Item">
+         		</form>
+         		<h4>$<%= cart.get(i).getItemPrice() %></h4>
+         		
             </div>
         </div>
-     
+  
 <br />
 
 <% }} %>
 	</div><!--  row  -->
 </div>			
-
-<br /><h4 class="col-md-12 text-center"> Nb of items in your cart so far: <%= totalItems %></h4>
-
+<br />
+<h4 class="col-md-12 text-center"> Nb of items in your cart so far: <%= totalItems %></h4>
+<br />
+<h4 class="col-md-12 text-center"> Total price: $<%= totalPrice %></h4>
+<br />
+<div class="col-md-12 text-center">
+	<button class="btn-orange text-center" form="checkoutCart" type="submit" value="Checkout">Checkout</button>
+</div>
+<br />
 <% } else { %>
 
 	<h4 class="col-md-12 text-center">Your shopping cart is empty!</h4>
