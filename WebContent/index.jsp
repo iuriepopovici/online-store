@@ -18,12 +18,14 @@
 <div class="content container-fluid">
   <div class="row homeFeature">
     <div class="col-lg-4 offset-lg-4 text-center">
-      <h1>Paula’s Porcupine Pagoda</h1>
+      <h1>Paula's Porcupine Pagoda</h1>
       <h2>Acupuncture Salon and Spa</h2>
+      <% if(session.getAttribute("email") == null) {%>
       <a href="registration.jsp">
       	  <button class="btn-orange" type="submit">REGISTER</button>
       </a>
       <p>Register and get access to our workshops!</p>
+      <% } %>
     </div>
   </div>
   <br>
