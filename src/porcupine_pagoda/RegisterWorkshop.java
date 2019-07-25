@@ -50,7 +50,7 @@ public class RegisterWorkshop extends HttpServlet {
 		String workshopId = request.getParameter("workshopId");
 		
 		if(email != null && !email.trim().equals("") && isValidEmail(email)) {
-			if(!emailInDb(email)) {
+			if(!emailInDb(email, workshopId)) {
 
 				if(first_name != null && !first_name.trim().equals("")) {
 					if( last_name != null && !last_name.trim().equals("")) {
@@ -104,12 +104,13 @@ public class RegisterWorkshop extends HttpServlet {
         return false;
     }
 	
-	static boolean emailInDb(String email) {
+	static boolean emailInDb(String email, String workshopId) {
 		boolean emailInDb = true;
 		try {
 			Connection conn = DBConnect.initDB();
-			PreparedStatement check = conn.prepareStatement("select * from Customer where email=?");
+			PreparedStatement check = conn.prepareStatement("select * from Workshop_Registration where email=? and workshopId=?");
 			check.setString(1, email);
+			check.setString(2, workshopId);
 			
 			ResultSet rs = check.executeQuery();
 			if(!rs.next()) {

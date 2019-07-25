@@ -17,7 +17,7 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 
-<br /><h3 class="col-md-12 text-center">SHOPPING CART</h3><br />
+<br /><h1 class="col-md-12 text-center">Shopping Cart</h1><br />
 <div class="container-fluid">
    <div class="row store-featured text-center">
 

@@ -24,7 +24,7 @@ if (request.getAttribute("emptyEmail") != null) {
 	message = "<div class='alert alert-danger'>Please enter a valid email address to sign up!</div>";
 } 
 else if (request.getAttribute("emailInDb") != null) {
-	message = "<div class='alert alert-danger'>This email address is associated with an existing account! <br />Please use a different email address!</div>";
+	message = "<div class='alert alert-danger'>You are already registered for this workshop!</div>";
 }
 else if (request.getAttribute("emptyFirstName") != null) {
 	message = "<div class='alert alert-danger'>Please enter your first name to register!</div>";
