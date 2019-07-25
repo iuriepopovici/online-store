@@ -15,7 +15,6 @@ String product = "T-shirt";
 String imgSrc = "img/merch/T-shirt.png";
 String imgAlt = "Logo T-shirt";
 String price = "$15";
-String
 Vector<String> availProds = new Vector<String>();
 availProds.add("Cap");
 availProds.add("Mug");
@@ -25,9 +24,9 @@ Vector<String[]> itemImgs = new Vector<String[]>();
 
 try {
 	Connection conn = DBConnect.initDB();
-	PreparedStatement imageSt = conn.prepareStatement("select product_id from Product where product_id=?");
+	PreparedStatement itemSt = conn.prepareStatement("select product_id from Product where product_id=?");
 	imageSt.setString(1, "T-Shirt");
-	ResultSet rs = imageSt.executeQuery();
+	ResultSet rs = itemSt.executeQuery();
 	
 	for(int idx=0; idx < rs.length; idx++){
 		String[] imageSet = new String[3];
