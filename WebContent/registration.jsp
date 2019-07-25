@@ -17,8 +17,10 @@
 <div class="container-fluid">
   <br>
   <div class="row">
-    <div class="col-md-4 offset-md-4">
+    <div class="col-md-4 offset-md-4 form-group required">
       <h1>Registration</h1>
+      <div class="control-label">required field</div>
+      <br />
       <form class="registration-form" action="Register" method="post">
         <table>
           <tr>
@@ -34,12 +36,12 @@
             <td><input type="text" name="phone" value=""></td>
           </tr>
           <tr>
-            <td><label>Email:</label></td>
-            <td><input type="text" name="email" value=""></td>
+            <td><label class="control-label">Email:</label></td>
+            <td><input type="text" name="email" value="" required></td>
           </tr>
           <tr>
-            <td><label>Password:</label></td>
-            <td><input type="text" name="password" value=""></td>
+            <td><label class="control-label">Password:</label></td>
+            <td><input type="text" name="password" value="" required></td>
           </tr>
         </table>
         <input class="btn btn-orange" type="submit" name="submit_registration" value="Submit">

@@ -127,7 +127,7 @@ input[type="search"], textarea{
   }
 }
 
-.store-featured{
+.store-featured {
 }
 
 .store-featured-item {
@@ -139,7 +139,14 @@ input[type="search"], textarea{
     background-color: $accent-color;
 }
 
-.store_photo{
+.store_photo {
   height: 256px;
   width: 256px;
+}
+
+.form-group.required .control-label:before {
+   color: red;
+   content: "*";
+   position: absolute;
+   margin-left: -10px;
 }

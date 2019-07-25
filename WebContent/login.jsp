@@ -28,18 +28,20 @@ if (request.getAttribute("failedLoginEmail") != null) {
 <div class="container-fluid">
   <br>
   <div class="row">
-    <div class="col-md-4 offset-md-4">
+    <div class="col-md-4 offset-md-4 form-group required">
       <h1>Login</h1>
       <%= message %>
+      <div class="control-label">required field</div>
+      <br />
       <form class="login-form" action="Login" method="post">
         <table>
           <tr>
-            <td><label>Email:</label></td>
-            <td><input class="form-control mr-sm-2" type="email" name="login_email" value="<%= emailVal %>"></td>
+            <td><label class="control-label">Email:</label></td>
+            <td><input class="form-control mr-sm-2" type="email" name="login_email" value="<%= emailVal %>" required></td>
           </tr>
           <tr>
-            <td><label>Password:</label></td>
-            <td><input class="form-control mr-sm-2" type="password" name="login_password"></td>
+            <td><label class="control-label">Password:</label></td>
+            <td><input class="form-control mr-sm-2" type="password" name="login_password" required></td>
           </tr>
         </table>
         <input class="btn btn-orange" type="submit" name="login_submit" value="Login">

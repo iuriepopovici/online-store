@@ -17,22 +17,24 @@
 <div class="container-fluid">
   <br>
   <div class="row">
-    <div class="col-md-4 offset-md-4">
-      <h6><%= request.getParameter("workshopName") %></h6>
-      <p>Free workshop sign up:</p>
+    <div class="col-md-4 offset-md-4 form-group required">
+      <h5><%= request.getParameter("workshopName") %></h5>
+      <h5>Free workshop sign up:</h5>
+      <div class="control-label">required field</div>
+      <br />
       <form class="registration-form" action="RegisterWorkshop" method="post">
         <table>
           <tr>
-            <td><label>First Name:</label></td>
+            <td><label class="control-label">First Name:</label></td>
             <td><input type="text" name="first_name" value=""></td>
           </tr>
           <tr>
-            <td><label>Last Name:</label></td>
+            <td><label class="control-label">Last Name:</label></td>
             <td><input type="text" name="last_name" value=""></td>
           </tr>
           <tr>
-            <td><label>Email:</label></td>
-            <td><input type="text" name="email" value="">
+            <td><label class="control-label">Email:</label></td>
+            <td><input type="text" name="email" value="" required>
             <input type="hidden" name="workshopId" value="<%=request.getParameter("workshopId")%>">
             <input type="hidden" name="workshopName" value="<%=request.getParameter("workshopName")%>">
           </tr>

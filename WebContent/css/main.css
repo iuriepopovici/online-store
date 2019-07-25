@@ -1,71 +1,87 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Vollkorn:400i&display=swap");
 body {
   background-color: white;
-  color: #12111d; }
+  color: #12111d;
+}
 
 h1, h2, h3, h4, h5 {
   font-family: "Vollkorn", serif;
-  color: #12111d; }
+  color: #12111d;
+}
 
 p, a, button, label {
   font-family: "Montserrat", sans-serif;
-  color: #12111d; }
+  color: #12111d;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 img {
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
 .header, .footer {
   background-color: #d8723b;
-  padding: 4pt; }
-  .header h1, .header h2, .header h3, .header h4, .header h5, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
-    color: #c6c3db; }
+  padding: 4pt;
+}
+.header h1, .header h2, .header h3, .header h4, .header h5, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5 {
+  color: #c6c3db;
+}
 
 .navbar {
-  background-color: #f3915c; }
+  background-color: #f3915c;
+}
 
 .login-form label, .registration-form label {
   color: #12111d;
   font-size: 12px;
   text-align: left;
-  padding-right: 5px; }
-.login-form input[type="email"], .login-form input[type="password"], .registration-form input[type="email"], .registration-form input[type="password"] {
-  min-width: 80px; }
-.login-form input[type="submit"], .registration-form input[type="submit"] {
+  padding-right: 5px;
+}
+.login-form input[type=email], .login-form input[type=password], .registration-form input[type=email], .registration-form input[type=password] {
+  min-width: 80px;
+}
+.login-form input[type=submit], .registration-form input[type=submit] {
   width: 80px;
-  margin: 5px auto; }
+  margin: 5px auto;
+}
 
 .btn-orange {
   padding: 6pt;
   border: 1pt solid #d8723b;
   color: #d8723b;
   background: white;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .btn-blue {
   padding: 6pt;
   border: 1pt solid #c6c3db;
   color: #c6c3db;
   background: none;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .homeFeature {
   padding: 160px 0px;
   background-color: #c6c3db;
   background-image: url("../img/photo/acupuncture_1280_720.png");
   background-repeat: no-repeat;
-  background-size: cover; }
-  .homeFeature h1, .homeFeature h2, .homeFeature h3, .homeFeature h4, .homeFeature h5 {
-    color: #d8723b; }
+  background-size: cover;
+}
+.homeFeature h1, .homeFeature h2, .homeFeature h3, .homeFeature h4, .homeFeature h5 {
+  color: #d8723b;
+}
 
 .why_choose_us {
   border: 2pt solid #d8723b;
   padding: 4pt;
   margin: 4pt 0pt;
   border-radius: 20px;
-  background-color: #fefead; }
+  background-color: #fefead;
+}
 
 .news {
   min-height: 350px;
@@ -73,9 +89,11 @@ img {
   padding: 4pt;
   margin: 4pt;
   border-radius: 20px;
-  background-color: #f3915c; }
-  .news ul {
-    list-style-type: none; }
+  background-color: #f3915c;
+}
+.news ul {
+  list-style-type: none;
+}
 
 .store-featured-item {
   min-height: 300px;
@@ -83,10 +101,19 @@ img {
   padding: 15px;
   margin: 10px 0px;
   border-radius: 20px;
-  background-color: #c6c3db; }
+  background-color: #c6c3db;
+}
 
 .store_photo {
   height: 256px;
-  width: 256px; }
+  width: 256px;
+}
+
+.form-group.required .control-label:before {
+  color: red;
+  content: "*";
+  position: absolute;
+  margin-left: -10px;
+}
 
 /*# sourceMappingURL=main.css.map */

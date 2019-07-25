@@ -88,7 +88,8 @@ public class Register extends HttpServlet {
 			
 		}
 		else {
-			response.sendRedirect("registration.jsp");
+			request.setAttribute("emptyEmail", true);
+			request.getRequestDispatcher("registration.jsp").forward(request, response);
 		}
 	}
 }

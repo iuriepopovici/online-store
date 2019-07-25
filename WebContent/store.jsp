@@ -18,7 +18,7 @@
   <br>
   <div class="row">
     <div class="col-md-12  text-center">
-      <h1>STORE</h1>
+      <h1>Store</h1>
     </div>
   </div>
 
