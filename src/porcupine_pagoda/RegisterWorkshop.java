@@ -50,7 +50,6 @@ public class RegisterWorkshop extends HttpServlet {
 			try {
 				Connection conn = DBConnect.initDB();
 				PreparedStatement ins = conn.prepareStatement("insert into Workshop_Registration values(default, ?, ?, ?, ?)");
-				//ins.setInt(1, 0);
 				ins.setString(1, workshopId);
 				ins.setString(2, first_name);
 				ins.setString(3, last_name);

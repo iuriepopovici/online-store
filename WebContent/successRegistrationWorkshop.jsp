@@ -10,17 +10,20 @@
 
 <jsp:include page="include/header.jsp" />
 
-<h2><%= request.getParameter("workshopName") %></h2>
-<h3>Workshop Registration Successful</h3>
-<br />
-We saved the following information:
-<br />
-First Name: <%= request.getParameter("first_name") %>
-<br />
-Last Name: <%= request.getParameter("last_name") %>
-<br />
-Email: <%= request.getParameter("email") %>
-<br />
+<div class="text-center">
+	<br/>
+	<h2><%= request.getParameter("workshopName") %></h2>
+	<h3>Workshop Registration Successful!!!</h3>
+	<br /><br />
+	<h5>We saved the following information:</h5>
+	<br />
+	<h6>First Name: <%= request.getParameter("first_name") %></h6>
+	<br />
+	<h6>Last Name: <%= request.getParameter("last_name") %></h6>
+	<br />
+	<h6>Email: <%= request.getParameter("email") %></h6>
+	<br />
+</div>
 
 <jsp:include page="include/footer.jsp" />
 
