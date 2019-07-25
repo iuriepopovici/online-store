@@ -82,5 +82,6 @@ public class Login extends HttpServlet {
 			request.setAttribute("emptyEmail", true);
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
+		
 	}
 }

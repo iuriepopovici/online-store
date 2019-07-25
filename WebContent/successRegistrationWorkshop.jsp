@@ -17,11 +17,9 @@
 	<br /><br />
 	<h5>We saved the following information:</h5>
 	<br />
-	<h6>First Name: <%= request.getParameter("first_name") %></h6>
+	<h6><%= request.getParameter("first_name")%> <%= request.getParameter("last_name")%></h6>
 	<br />
-	<h6>Last Name: <%= request.getParameter("last_name") %></h6>
-	<br />
-	<h6>Email: <%= request.getParameter("email") %></h6>
+	<h6><%= request.getParameter("email") %></h6>
 	<br />
 </div>
 
