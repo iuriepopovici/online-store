@@ -12,19 +12,24 @@
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 <body>
+
 <jsp:include page="include/header.jsp" />
-<% if(session.getAttribute("email") != null) { %>
+
+<div class="text-center alert alert-warning">
+	<% if(session.getAttribute("email") != null) { %>
 	<h3>You are logged in as ${email}. 
 	<br />
 	We are sorry to see you leave.</h3>
 	<br /><br />
-	<h3>Are you sure you want to logout?</h3>
-
-<form action="Logout">
-	<input type="submit" value="Logout">
-</form>
-<% } %>
+	<h3 class="text-danger">Are you sure you want to logout?</h3>
+	<form action="Logout">
+		<input type="submit" class="btn btn-orange" value="Logout">
+	</form>
+	
+	<% } %>
+</div>
 
 <jsp:include page="include/footer.jsp" />
+
 </body>
 </html>

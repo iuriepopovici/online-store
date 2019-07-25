@@ -69,15 +69,18 @@ public class Login extends HttpServlet {
 					request.getRequestDispatcher("index.jsp").forward(request, response);
 				}
 				else {
-					response.sendRedirect("login.jsp");
+					request.setAttribute("failedLoginEmail", email);
+					request.getRequestDispatcher("login.jsp").forward(request, response);		
 				}
 			} catch (Exception e) {
 				System.err.println("Database Connection Failed");
 				e.printStackTrace();
+				request.getRequestDispatcher("login.jsp").forward(request, response);		
 			}
 		}
 		else {
-			response.sendRedirect("login.jsp");
+			request.setAttribute("emptyEmail", true);
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 	}
 }

@@ -14,25 +14,35 @@
 
 <jsp:include page="include/header.jsp" />
 
+<%
+String emailVal = "", message = "";
+if (request.getAttribute("emptyEmail") != null) {
+	message = "<div class='alert alert-danger'>Please enter an email to login!</div>";
+}
+if (request.getAttribute("failedLoginEmail") != null) {
+	emailVal = (String)request.getAttribute("failedLoginEmail");
+	message = "<div class='alert alert-danger'>Invalid credentials! Please try again!</div>";
+}
+%>
+
 <div class="container-fluid">
   <br>
   <div class="row">
     <div class="col-md-4 offset-md-4">
       <h1>Login</h1>
+      <%= message %>
       <form class="login-form" action="Login" method="post">
         <table>
           <tr>
             <td><label>Email:</label></td>
-            <td><input class="form-control mr-sm-2" type="email" name="login_email"></td>
+            <td><input class="form-control mr-sm-2" type="email" name="login_email" value="<%= emailVal %>"></td>
           </tr>
           <tr>
             <td><label>Password:</label></td>
             <td><input class="form-control mr-sm-2" type="password" name="login_password"></td>
           </tr>
         </table>
-        <input class="btn btn-blue" type="submit" name="login_submit" value="Login">
-        <br /><br />
-        <input class="btn btn-orange" type="submit" name="login_submit" value="Register">
+        <input class="btn btn-orange" type="submit" name="login_submit" value="Login">
       </form>
     </div>
   </div>
