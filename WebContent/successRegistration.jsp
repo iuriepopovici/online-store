@@ -7,6 +7,7 @@
 <title>Paulas Porcupine Pogoda</title>
 </head>
 <body>
+
 <%
 	if(session.getAttribute("email") == null) {
 		response.sendRedirect("registration.jsp");
@@ -14,20 +15,23 @@
 %>
 
 <jsp:include page="include/header.jsp" />
+<div class="text-center">
+	<h2>Welcome!!!</h2>
+	<h3>Your registration was successful!!!</h3>
+	<br /><br />
+	We saved the following information:
+	<br /><br />
+	First Name: ${first_name}
+	<br />
+	Last Name: ${last_name}
+	<br />
+	Phone Number: ${phone}
+	<br />
+	Email: ${email}
+	<br />
+	Password: *********
+</div>
 
-Welcome!!! Your registration was successful!!!
-<br /><br />
-We saved the following information:
-<br />
-First Name: ${first_name}
-<br />
-Last Name: ${last_name}
-<br />
-Phone Number: ${phone}
-<br />
-Email: ${email}
-<br />
-Password: *********
 
 <jsp:include page="include/footer.jsp" />
 

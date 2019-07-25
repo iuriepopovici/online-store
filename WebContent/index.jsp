@@ -45,7 +45,7 @@
           <h4>News</h4>
               <p>Free acupuncture workshops!</p>
               <p>Don't miss this opportunity!</p> 
-              <p>Coffee and refreshments will be served!</p>
+              <p>All workshops are held at our location!</p>
               <p>To sign up, click the button below. You will be able to choose your preferred topic and date.</p>
               <a href="workshop.jsp">
               	   <button class="btn-orange" type="submit">SIGN UP</button>
