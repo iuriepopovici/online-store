@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import java.sql.Connection; 
 import java.sql.PreparedStatement;
@@ -15,8 +17,7 @@ import java.sql.ResultSet;
 
 import porcupine_pagoda.DBConnect; 
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 
 
@@ -26,7 +27,7 @@ import java.util.regex.Pattern;
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Pattern emailNamePtrn = Pattern.compile(
+	private static Pattern emailPattern = Pattern.compile(
 		    "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");   
     /**
      * @see HttpServlet#HttpServlet()
@@ -112,7 +113,7 @@ public class Register extends HttpServlet {
 	
 	static boolean isValidEmail(String email) {
         
-        Matcher check = emailNamePtrn.matcher(email);
+        Matcher check = emailPattern.matcher(email);
         if(check.matches()){
             return true;
         }

@@ -24,7 +24,7 @@ if (request.getAttribute("emptyEmail") != null) {
 	message = "<div class='alert alert-danger'>Please enter a valid email address to register!</div>";
 } 
 else if (request.getAttribute("emptyPass") != null) {
-	message = "<div class='alert alert-danger'>Please enter a password to register!</div>";
+	message = "<div class='alert alert-danger'>Please enter a password to register (no spaces)!</div>";
 	if (request.getParameter("email") != null) {
 		email = request.getParameter("email");
 	}
