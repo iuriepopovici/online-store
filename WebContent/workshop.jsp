@@ -45,11 +45,13 @@
         We will teach you how to eliminate waste and 
         maximize your investment.
         
-        <form action="registerWorkshop.jsp" id="registerWorkshop" method="post">
+        <form action="registerWorkshop.jsp" id="registerWorkshopBusiness" method="post">
       		<input type="hidden" name="workshopName" value="Acupuncture Business Success (December 15, 2019)">
+      		<input type="hidden" name="workshopId" value="Business">
+ 
       	</form>
       	<br/>
-		<button class="btn-orange text-center" form="registerWorkshop" type="submit" value="Sign Up">Sign Up</button>
+		<button class="btn-orange text-center" form="registerWorkshopBusiness" type="submit" value="Sign Up">Sign Up</button>
 
       </div>
       </div>
@@ -76,11 +78,12 @@
         Can beta-blockers cause insomnia?  
         These questions and more will be answered in “A Basic Acupuncture Guide to Insomnia”!       
         
-        <form action="registerWorkshop.jsp" id="registerWorkshop" method="post">
+        <form action="registerWorkshop.jsp" id="registerWorkshopInsomnia" method="post">
       		<input type="hidden" name="workshopName" value="A Basic Acupuncture Guide to Insomnia (July 10, 2020)">
+      	    <input type="hidden" name="workshopId" value="Insomnia">
       	</form>
 		<br/>
-		<button class="btn-orange" form="registerWorkshop" type="submit" value="Sign Up">Sign Up</button>
+		<button class="btn-orange" form="registerWorkshopInsomnia" type="submit" value="Sign Up">Sign Up</button>
 
       </div>
     </div>
@@ -100,11 +103,12 @@
         how they are spread, and prevention techniques to keep your practice clean and safe. 
         Diseases that are discussed include HIV/AIDS, Hepatitis, Influenza, Malaria, Polio, Tuberculosis.
         
-      	<form action="registerWorkshop.jsp" id="registerWorkshop" method="post">
+      	<form action="registerWorkshop.jsp" id="registerWorkshopPediatrics" method="post">
       		<input type="hidden" name="workshopName" value="Acupuncture for Pediatrics (August 18, 2020)">
+      	    <input type="hidden" name="workshopId" value="Pediatrics">
       	</form>
       	<br/>
-		<button class="btn-orange text-center" form="registerWorkshop" type="submit" value="Sign Up">Sign Up</button>
+		<button class="btn-orange text-center" form="registerWorkshopPediatrics" type="submit" value="Sign Up">Sign Up</button>
       
       </div>
     </div>
@@ -124,11 +128,12 @@
         truthful advertising and history of advertising, appropriate credentials and designation, 
         efficacy in treatment out comes, and state regulatory reporting.
         
-        <form action="registerWorkshop.jsp" id="registerWorkshop" method="post">
+        <form action="registerWorkshop.jsp" id="registerWorkshopEthics" method="post">
       		<input type="hidden" name="workshopName" value="Acupuncture Ethics (October 15, 2020)">
+      		<input type="hidden" name="workshopId" value="Ethics">
       	</form>
       	<br/>
-		<button class="btn-orange text-center" form="registerWorkshop" type="submit" value="Sign Up">Sign Up</button>
+		<button class="btn-orange text-center" form="registerWorkshopEthics" type="submit" value="Sign Up">Sign Up</button>
         
       </div>
    </div>
