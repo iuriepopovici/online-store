@@ -80,7 +80,6 @@ public class ProcessCart extends HttpServlet {
 					item.setWeight(rsProd.getDouble("product_weight"));
 					item.setNbItems(quantity);
 					
-					
 					itemSt.close();
 					conn.close();
 					request.getRequestDispatcher("index.jsp").forward(request, response);
