@@ -33,8 +33,8 @@ public class TShirtQuery extends HttpServlet {
 		
 		ProductData blueShirt = queryItem(1);
 		ProductData orangeShirt = queryItem(2);
-		request.setAttribute("blueShirt", blueShirt);
-		request.setAttribute("orangeShirt", orangeShirt);
+		request.setAttribute("blueItem", blueShirt);
+		request.setAttribute("orangeItem", orangeShirt);
 		request.getRequestDispatcher("item.jsp").forward(request, response);
 	}
 

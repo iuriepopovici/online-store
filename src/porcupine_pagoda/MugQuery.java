@@ -34,8 +34,8 @@ public class MugQuery extends HttpServlet {
 		
 		ProductData blueMug = queryItem(5);
 		ProductData orangeMug = queryItem(6);
-		request.setAttribute("blueMug", blueMug);
-		request.setAttribute("orangeMug", orangeMug);
+		request.setAttribute("blueItem", blueMug);
+		request.setAttribute("orangeItem", orangeMug);
 		request.getRequestDispatcher("item.jsp").forward(request, response);
 	}
 

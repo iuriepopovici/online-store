@@ -34,13 +34,33 @@ if(request.getParameter("product") != null && request.getParameter("price") != n
 		imgAlt = "Logo " + product;
 	}
 	else {
-		response.sendRedirect("store.jsp");
+		//response.sendRedirect("store.jsp");
 	} 
 } 
 else {
-	response.sendRedirect("store.jsp");
+	//response.sendRedirect("store.jsp");
 }
 %>
+
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-md-12  text-center">
+      <h1>${blueItem.itemName}</h1>
+      <img class="store_photo" src="${blueItem.imgMd}" alt="${blueItem.itemName}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12  text-center">
+    <p>${blueItem.itemPrice}</p>
+    
+    <form action="ProcessCart" method="post" id="addToCartForm">
+		<input type="hidden" name="product" value="${blueItem.itemId}"/>
+    </form>
+    <form action="Checkout" method="post" id="buyForm">
+		<input type="hidden" name="product" value="${blueItem.itemId}" />
+    </form>
+<!--  
 <div class="container-fluid">
   <br>
   <div class="row">
@@ -59,6 +79,8 @@ else {
     <form action="Checkout" method="post" id="buyForm">
 		<input type="hidden" name="product" value=<%= product %> />
     </form>
+    
+    -->  
     
     <label>Quantity:</label>
     <select name="quantity" form="addToCartForm">

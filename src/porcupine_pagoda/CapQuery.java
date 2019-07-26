@@ -33,8 +33,8 @@ public class CapQuery extends HttpServlet {
 		
 		ProductData blueCap = queryItem(3);
 		ProductData orangeCap = queryItem(4);
-		request.setAttribute("blueCap", blueCap);
-		request.setAttribute("orangeCap", orangeCap);
+		request.setAttribute("blueItem", blueCap);
+		request.setAttribute("orangeItem", orangeCap);
 		request.getRequestDispatcher("item.jsp").forward(request, response);
 	}
 
