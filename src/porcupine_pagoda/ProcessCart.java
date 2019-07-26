@@ -57,11 +57,12 @@ public class ProcessCart extends HttpServlet {
 		if(productId >= 1 && productId <= 6)
 		{
 			try {
+				CartItem item = new CartItem();
+				
 				Connection conn = DBConnect.initDB();
 				PreparedStatement itemSt = conn.prepareStatement("select * from Product where product_id=?");
 				itemSt.setInt(1, String.parseInt(productId));
 				ResultSet rsProd = itemSt.executeQuery();
-				CartItem item = new CartItem();
 				
 				if(rsProd.next()) {
 					
@@ -70,6 +71,8 @@ public class ProcessCart extends HttpServlet {
 					item.setItemPrice(rsProd.getDouble("price"));
 					item.setColor(rsProd.getString("product_color"));
 					item.setSku(rsProd.getString("product_sku"));
+					item.setNbItems(rsProd.getInt("quantity_avail"));
+					item.setWeight(rsProd.getDouble("product_weight"));
 					
 					
 					itemSt.close();
