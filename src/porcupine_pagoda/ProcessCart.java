@@ -45,7 +45,7 @@ public class ProcessCart extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		String product = request.getParameter("product");
+		String productId = request.getParameter("product");
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(7200);
 		
@@ -53,7 +53,36 @@ public class ProcessCart extends HttpServlet {
 		if(cart == null) {
 			cart = new ArrayList<CartItem>();
 		}
-		cart.add(new CartItem(product, 0, 1, 1));
+		
+		if(productId >= 1 && productId <= 6)
+		{
+			try {
+				Connection conn = DBConnect.initDB();
+				PreparedStatement itemSt = conn.prepareStatement("select * from Product where product_id=?");
+				itemSt.setInt(1, String.parseInt(productId));
+				ResultSet rsProd = itemSt.executeQuery();
+				CartItem item = new CartItem();
+				
+				if(rsProd.next()) {
+					
+					item.setItemName(rsProd.getString("product_name"));
+					item.setItemId(rsProd.getInt("product_id"));
+					item.setItemPrice(rsProd.getDouble("price"));
+					item.setColor(rsProd.getString("product_color"));
+					item.setSku(rsProd.getString("product_sku"));
+					
+					
+					itemSt.close();
+					conn.close();
+					request.getRequestDispatcher("index.jsp").forward(request, response);
+				}
+				cart.add(item);
+			} catch (Exception e) {
+				System.err.println("Database Connection Failed");
+				e.printStackTrace();		
+			}
+		}
+		//cart.add(new CartItem(product, 0, 1, 1));
 		
 		session.setAttribute("cart", cart);
 		request.getRequestDispatcher("viewCart.jsp").forward(request, response);
