@@ -45,7 +45,9 @@ public class ProcessCart extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		String productId = request.getParameter("product");
+		String productIdPara = request.getParameter("product");
+		String quantityPara = request.getParameter("quantity");
+		int productId, quantity;
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(7200);
 		
@@ -54,6 +56,11 @@ public class ProcessCart extends HttpServlet {
 			cart = new ArrayList<CartItem>();
 		}
 		
+		if(productIdPara != null) productId = String.parseInt(productIdPara);
+		
+		if(quantityPara != null) quantity = String.parseInt(quantityPara);
+		else quantity = 0;
+		
 		if(productId >= 1 && productId <= 6)
 		{
 			try {
@@ -61,7 +68,7 @@ public class ProcessCart extends HttpServlet {
 				
 				Connection conn = DBConnect.initDB();
 				PreparedStatement itemSt = conn.prepareStatement("select * from Product where product_id=?");
-				itemSt.setInt(1, String.parseInt(productId));
+				itemSt.setInt(1, productId);
 				ResultSet rsProd = itemSt.executeQuery();
 				
 				if(rsProd.next()) {
@@ -72,6 +79,7 @@ public class ProcessCart extends HttpServlet {
 					item.setColor(rsProd.getString("product_color"));
 					item.setSku(rsProd.getString("product_sku"));
 					item.setWeight(rsProd.getDouble("product_weight"));
+					item.setNbitems(String.parseInt(quantity));
 					
 					
 					itemSt.close();

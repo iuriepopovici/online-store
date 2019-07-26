@@ -46,11 +46,14 @@ itemCart.setImgLg("img/merch/tshirt_logo_orange_720.png");
     <p><%= "$"+itemCart.getItemPrice() %></p>
     <form action="ProcessCart" method="post" id="adToCartForm">
 		<input type="hidden" name="product" value=<%= itemCart.getItemId() %> />
+		<p>Quantity (limit 5)<p>
+  		<input type="number" name="quantity" min="1" max="5">
     </form>
     <button class="btn-orange" form="adToCartForm" type="submit" value="Add to cart">Add to cart</button>
     <br /><br />
     <form action="Checkout" method="post" id="buyForm">
 		<input type="hidden" name="product" value=<%= itemCart.getItemId() %> />
+		<input type="hidden" name="quantity" value="1">
     </form>
     <button class="btn-orange" form="buyForm" type="submit" value="Add to cart">Buy now</button>
     </div>
