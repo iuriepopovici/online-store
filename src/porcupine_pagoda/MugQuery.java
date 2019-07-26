@@ -62,6 +62,7 @@ public class MugQuery extends HttpServlet {
 				item.setQuantityAvail(rsProd.getInt("quantity_avail"));
 				itemSt.close();
 			}
+			queryImgs(id, item, conn);
 			conn.close();			
 			return item;
 		} catch (Exception e) {
@@ -69,6 +70,25 @@ public class MugQuery extends HttpServlet {
 			e.printStackTrace();		
 		}
 		return item;
+	}
+	
+	protected void queryImgs(int id, ProductData item, Connection conn) {
+		try {			
+			//Connection conn = DBConnect.initDB();
+			PreparedStatement imgSt = conn.prepareStatement("select * from Product_Images where product_id=?");
+			imgSt.setInt(1, 1);
+			ResultSet rsImg = imgSt.executeQuery();
+			
+			if(rsImg.next()) {
+				item.setImgSm(rsImg.getString("image_default_sm"));
+				item.setImgMd(rsImg.getString("image_default_md"));
+				item.setImgLg(rsImg.getString("image_default_lg"));
+				imgSt.close();
+			}			
+		} catch (Exception e) {
+			System.err.println("Database Connection Failed");
+			e.printStackTrace();		
+		}
 	}
 
 }
