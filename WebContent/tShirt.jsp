@@ -7,6 +7,7 @@
 <body>
 
 <jsp:include page="include/header.jsp" />
+<%@ page import="porcupine_pagoda.DBConnect, java.sql.ResultSet, java.sql.Connection, java.sql.PreparedStatement, java.util.ArrayList" %>
 
 <%@ page import="java.util.*" %>
 
