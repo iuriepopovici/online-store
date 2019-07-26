@@ -46,7 +46,7 @@ public class ProcessCart extends HttpServlet {
 		response.setContentType("text/html");
 		String productIdPara = request.getParameter("product");
 		String quantityPara = request.getParameter("quantity");
-		int productId, quantity;
+		int productId = 1, quantity;
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(7200);
 		
