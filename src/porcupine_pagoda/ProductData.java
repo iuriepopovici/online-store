@@ -15,7 +15,7 @@ public class ProductData {
 	public ProductData() {
 		this.itemName = "Product";
 		this.itemId = -1;
-		this.nbItems = 0;
+		this.quantityAvail = 0;
 		this.itemPrice = 0.00;
 		
 		this.sku = "000000";
@@ -51,7 +51,7 @@ public class ProductData {
 	}
 	
 	public void setQuantityAvail(int quantityAvail) {
-		this.quantityAvail = nbItems;
+		this.quantityAvail = quantityAvail;
 	}
 	
 	public void setItemPrice(double itemPrice) {

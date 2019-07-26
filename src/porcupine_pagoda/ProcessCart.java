@@ -8,8 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import java.sql.Connection; 
-import java.sql.PreparedStatement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,9 +55,9 @@ public class ProcessCart extends HttpServlet {
 			cart = new ArrayList<CartItem>();
 		}
 		
-		if(productIdPara != null) productId = String.parseInt(productIdPara);
+		if(productIdPara != null) productId = Integer.parseInt(productIdPara);
 		
-		if(quantityPara != null) quantity = String.parseInt(quantityPara);
+		if(quantityPara != null) quantity = Integer.parseInt(quantityPara);
 		else quantity = 0;
 		
 		if(productId >= 1 && productId <= 6)

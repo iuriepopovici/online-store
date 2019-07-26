@@ -24,7 +24,8 @@ availProds.add("T-Shirt");
 Vector<String[]> itemImgs = new Vector<String[]>();
 
 try {
-	Connection conn = DBConnect.initDB();
+	DBConnect db = new DBConnect();
+	Connection conn = db.initDB();
 	PreparedStatement itemSt = conn.prepareStatement("select product_id from Product where product_id=?");
 	imageSt.setString(1, "T-Shirt");
 	ResultSet rs = itemSt.executeQuery();
