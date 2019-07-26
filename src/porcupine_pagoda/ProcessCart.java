@@ -79,7 +79,7 @@ public class ProcessCart extends HttpServlet {
 					item.setColor(rsProd.getString("product_color"));
 					item.setSku(rsProd.getString("product_sku"));
 					item.setWeight(rsProd.getDouble("product_weight"));
-					item.setNbitems(String.parseInt(quantity));
+					item.setNbitems(quantity);
 					
 					
 					itemSt.close();
