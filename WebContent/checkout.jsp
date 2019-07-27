@@ -21,6 +21,8 @@ String phone = "";
 String email = "";
 String address = "";
 String zipcode = "";
+String cc_num = "";
+String cc_sec_code = "";
 
 if (request.getAttribute("email_empty") != null || request.getAttribute("email_invalid") != null) {
 	message = "<div class='alert alert-danger'>Please enter a valid email address!</div>";
@@ -34,8 +36,16 @@ if (request.getAttribute("cc_num_empty") != null) {
 	message = "<div class='alert alert-danger'>Please enter a credit card number!</div>";
 } 
 
+if (request.getAttribute("cc_num_invalid") != null) {
+	message = "<div class='alert alert-danger'>Please enter a valid credit card number!</div>";
+} 
+
 if (request.getAttribute("cc_sec_code") != null) {
 	message = "<div class='alert alert-danger'>Please enter your credit card security code number!</div>";
+}
+
+if (request.getAttribute("expdate") != null) {
+	message = "<div class='alert alert-danger'>Please enter a valid expiration date!</div>";
 }
 
 if (request.getAttribute("address_empty") != null) {
@@ -75,6 +85,12 @@ if (request.getParameter("phone")!= null) {
 if (request.getParameter("zipcode")!= null) {
 	zipcode = request.getParameter("zipcode");
 }
+if (request.getParameter("cc_num")!= null) {
+	cc_num = request.getParameter("cc_num");
+}
+if (request.getParameter("cc_sec_code")!= null) {
+	cc_sec_code = request.getParameter("cc_sec_code");
+}
 %>
 
 <jsp:include page="include/header.jsp" />
@@ -103,8 +119,10 @@ if (request.getParameter("zipcode")!= null) {
             <td>$24.97</td>
           </tr>
         </table> -->
+        <% if (request.getParameter("total") != null){%>
         <h4 class="text-center alert alert-primary">Your card will be charged for: $<%=request.getParameter("total") %></h4>
         <br>
+        <% }%>
         <h3>Shipping Information</h3>
         <%= message %>
         
@@ -124,7 +142,7 @@ if (request.getParameter("zipcode")!= null) {
           </tr>
           <tr>
             <td>Email:</td>
-            <td><input  name="email" value="<%= email %>"></td>
+            <td><input type="email" name="email" value="<%= email %>"></td>
           </tr>
           <tr>
             <td>Address:</td>
@@ -132,7 +150,7 @@ if (request.getParameter("zipcode")!= null) {
           </tr>
           <tr>
             <td>Zip Code:</td>
-            <td><input type="text" name="zipcode" value="<%= zipcode %>"></td>
+            <td><input type="number" min="9999" name="zipcode" value="<%= zipcode %>"></td>
           </tr>
         </table>
        
@@ -141,11 +159,11 @@ if (request.getParameter("zipcode")!= null) {
         <table>
           <tr>
             <td>Credit Card Number:</td>
-            <td><input type="text" name="cc_num" value=""></td>
+            <td><input type="number" name="cc_num" value="<%= cc_num %>"></td>
           </tr>
           <tr>
             <td>Security Code:</td>
-            <td><input type="text" name="cc_sec_code" value=""></td>
+            <td><input type="text" name="cc_sec_code" value="<%= cc_sec_code %>"></td>
           </tr>
           <tr>
             <td>Expiration Date:</td>

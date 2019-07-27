@@ -63,7 +63,7 @@ availProds.add("T-Shirt");
   </div>
   <div class="row">
     <div class="col-md-12  text-center">
-    <p id="itemPrice">${blueItem.itemPrice}</p>
+    <p id="itemPrice">$${blueItem.itemPrice}</p>
     
     <form action="ProcessCart" method="post" id="addToCartForm">
 		<!-- <input type="hidden" name="product" value="${blueItem.itemId}"/> -->
