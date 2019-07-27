@@ -51,6 +51,7 @@ public class Checkout extends HttpServlet {
 		String cc_num = request.getParameter("cc_num");
 		String cc_sec_code = request.getParameter("cc_sec_code");
 		String zipcode = request.getParameter("zipcode");
+		String expdate = request.getParameter("expdate");
 		HttpSession session = request.getSession();
 		
 		boolean reload = false;
