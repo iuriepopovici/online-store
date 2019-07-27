@@ -19,6 +19,8 @@
   <div class="row">
     <div class="col-md-12  text-center">
       <h1>Workshop Schedule</h1>
+      <br />
+      <img src="img/photo/quills_display_375.jpg" alt="Quills for Workshop">
     </div>
   </div>
 </div>

@@ -65,6 +65,9 @@ if(session.getAttribute("cart") != null) {
                 		itemLink = "./mug";   
                 	
                 	out.print("<a class='text-primary' href = "+itemLink+"><br/>View Item</a>");
+                
+                	if(cart.get(i).getSize() != "" || cart.get(i).getSize() != null)
+                		out.print("<h4> Size: "+cart.get(i).getSize()+"</h4>");
                 %>             
                 
          		<h4>$<%= cart.get(i).getItemPrice() %> per item</h4>
