@@ -56,6 +56,7 @@ public class ProcessCart extends HttpServlet {
 		}
 		
 		if(productIdPara != null) productId = Integer.parseInt(productIdPara);
+		else productId = 0;
 		
 		if(quantityPara != null) quantity = Integer.parseInt(quantityPara);
 		else quantity = 0;
@@ -71,7 +72,6 @@ public class ProcessCart extends HttpServlet {
 				ResultSet rsProd = itemSt.executeQuery();
 				
 				if(rsProd.next()) {
-					
 					item.setItemName(rsProd.getString("product_name"));
 					item.setItemId(rsProd.getInt("product_id"));
 					item.setItemPrice(rsProd.getDouble("price"));
@@ -79,11 +79,9 @@ public class ProcessCart extends HttpServlet {
 					item.setSku(rsProd.getString("product_sku"));
 					item.setWeight(rsProd.getDouble("product_weight"));
 					item.setNbItems(quantity);
-					
-					itemSt.close();
-					conn.close();
-					//request.getRequestDispatcher("index.jsp").forward(request, response);
 				}
+				itemSt.close();
+				conn.close();
 				cart.add(item);
 			} catch (Exception e) {
 				System.err.println("Database Connection Failed");
