@@ -74,14 +74,10 @@ if(session.getAttribute("cart") != null) {
          		
          		<h4>Count: <%= cart.get(i).getNbItems() %></h4>
          		
-     
          		<form action="viewCart.jsp" method="post">
          			<input type="hidden" name="remove" value="<%=i%>">
          			<input type="submit" value="Remove">
          		</form>
-         		
-       
-         			
          		
             </div>
         </div>
