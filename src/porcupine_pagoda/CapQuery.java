@@ -62,6 +62,7 @@ public class CapQuery extends HttpServlet {
 				item.setSku(rsProd.getString("product_sku"));
 				item.setWeight(rsProd.getDouble("product_weight"));
 				item.setQuantityAvail(rsProd.getInt("quantity_avail"));
+				item.setDescription(rsProd.getString("description"));
 				itemSt.close();
 			}
 			queryImgs(id, item, conn);

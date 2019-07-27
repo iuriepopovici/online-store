@@ -57,6 +57,11 @@ availProds.add("T-Shirt");
   	</div>
   </div>
   <div class="row">
+    <div class="col-md-4 offset-md-4  text-center">
+     <p class="itemDescription"> ${blueItem.description} </p>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-12  text-center">
     <p id="itemPrice">${blueItem.itemPrice}</p>
     

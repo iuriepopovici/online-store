@@ -11,6 +11,7 @@ public class ProductData {
 	private double weight;
 	private String color;
 	private String imgSm, imgMd, imgLg;
+	private String description;
 	
 	public ProductData() {
 		this.itemName = "Product";
@@ -105,5 +106,14 @@ public class ProductData {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 	
 }
