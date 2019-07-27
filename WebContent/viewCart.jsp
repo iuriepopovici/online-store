@@ -39,21 +39,21 @@ if(session.getAttribute("cart") != null) {
          <div class="col-md-3">
             <div class="store-featured-item">
                 <h4><%= cart.get(i).getItemName() %></h4>
-                <h4><%= cart.get(i).getColor() %></h4>
                 <% out.println(src); %>
                 
                 <%
                 	String itemLink;
-                	if(cart.get(i).getItemId == 1 || cart.get(i).getItemId == 2)
-                		itemLink = "/t_shirt";
-                	else if (cart.get(i).getItemId == 1 || cart.get(i).getItemId == 2)
-                		itemLink = "/cap";
+                	if(cart.get(i).getItemId() == 1 || cart.get(i).getItemId() == 2)
+                		itemLink = "./t_shirt";
+                	else if (cart.get(i).getItemId() == 3 || cart.get(i).getItemId() == 4)
+                		itemLink = "./cap";
                 	else
-                		itemLink = "/mug";   
+                		itemLink = "./mug";   
                 	
-                	out.print("<a href = "+itemLink+">View Item</a>");
+                	out.print("<a class='text-primary' href = "+itemLink+"><br/>View Item</a>");
                 %>             
                 <h4>Count: <%= cart.get(i).getNbItems() %></h4>
+                
          		<h4>$<%= cart.get(i).getItemPrice() %></h4>
          		
             </div>
@@ -69,8 +69,11 @@ if(session.getAttribute("cart") != null) {
 <br />
 <h4 class="col-md-12 text-center"> Total price: $<%= totalPrice %></h4>
 <br />
+<form action="checkout.jsp" id="Checkout">
+	<input type="hidden" name="total" value="<%= totalPrice %>">
+</form>
 <div class="col-md-12 text-center">
-	<button class="btn-orange text-center" form="checkoutCart" type="submit" value="Checkout">Checkout</button>
+	<button class="btn-orange text-center" form="Checkout" type="submit" value="Checkout">Checkout</button>
 </div>
 <br />
 <% } else { %>

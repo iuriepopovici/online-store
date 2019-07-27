@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,7 @@
 
 <jsp:include page="include/header.jsp" />
 
-<%@ page import="java.util.*" %>
+<%@ page import="java.util.*, porcupine_pagoda.ProductData" %>
 
 <%
 String product = "Cap";
@@ -25,6 +26,9 @@ Vector<String> availProds = new Vector<String>();
 availProds.add("Cap");
 availProds.add("Mug");
 availProds.add("T-Shirt");
+
+// USING THIS
+
 
 //response.sendRedirect("store.jsp");
 
@@ -83,22 +87,24 @@ availProds.add("T-Shirt");
 	  <option value="10">10</option>
 	</select>
 	
+
+<% ProductData pd = (ProductData) request.getAttribute("blueItem"); %>	
+<%if ( !pd.getItemName().equals("Mug") ){%>
 	
-	<c:set var = "type" scope = "page" value = "T-Shirt"/>
-      <c:if type = "${blueItem.itemName}">
-         <div class="sizeOptions">
-			<label>Size:</label>
-		    <select name="size" form="addToCartForm">
-		      <option value="xsm">X-Small</option>
-			  <option value="sm">Small</option>
-			  <option value="md">Medium</option>
-			  <option value="lg">Large</option>
-			  <option value="xlg">X-Large</option>
-			  <option value="xxlg">XX-Large</option>
-			  <option value="3xlg">3X-Large</option>
-			</select>
-		</div>
-    </c:if>
+    <div class="sizeOptions">
+		<label>Size:</label>
+	    <select name="size" form="addToCartForm">
+	      <option value="xsm">X-Small</option>
+		  <option value="sm">Small</option>
+		  <option value="md">Medium</option>
+		  <option value="lg">Large</option>
+		  <option value="xlg">X-Large</option>
+		  <option value="xxlg">XX-Large</option>
+		  <option value="3xlg">3X-Large</option>
+		</select>
+	</div>
+	
+ <% } %>
 	
 	<br />
 	<br />

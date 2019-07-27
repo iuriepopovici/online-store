@@ -21,7 +21,7 @@
     <div class="col-md-4 offset-md-4">
       <h1>Checkout</h1>
       <form class="billing_info text-right" action="sucessCheckout.html" method="post">
-        <table>
+        <!-- <table>
           <tr>
             <td>item 1</td>
             <td>$7.99</td>
@@ -38,7 +38,8 @@
             <td>Total:</td>
             <td>$24.97</td>
           </tr>
-        </table>
+        </table> -->
+        <h4 class="text-center alert alert-primary">Your card will be charged for: $<%=request.getParameter("total") %></h4>
         <br>
         <h3>Shipping Information</h3>
         <table>
@@ -52,11 +53,12 @@
           </tr>
           <tr>
             <td>Phone Number:</td>
-            <td><input type="text" name="phone" value=""></td>
+            <td><input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value=""></td>
+            <td><small>Format: 123-456-7890</small></td>
           </tr>
           <tr>
             <td>Email:</td>
-            <td><input type="text" name="email" value=""></td>
+            <td><input type="email" name="email" value=""></td>
           </tr>
           <tr>
             <td>Address 1:</td>
@@ -87,10 +89,8 @@
             <td><input type="text" name="credit_card_sec_code" value=""></td>
           </tr>
           <tr>
-            <td>Expiration Date (mm/YY):</td>
-            <td><input type="text" name="expiration_date_mm" value=""></td>
-            <td><input type="text" name="expiration_date_yy" value=""></td>
-          </tr>
+            <td>Expiration Date:</td>
+			<td><input type="month" id="start" name="start" min="2019-07"></td>
           <tr>
             <td>Billing Addess is the same as shipping:</td>
             <td><input type="checkbox" name="same_bill_address" value=""></td>
