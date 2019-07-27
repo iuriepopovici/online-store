@@ -52,7 +52,7 @@ public class MugQuery extends HttpServlet {
 		try {			
 			Connection conn = DBConnect.initDB();
 			PreparedStatement itemSt = conn.prepareStatement("select * from Product where product_id=?");
-			itemSt.setInt(1, 1);
+			itemSt.setInt(1, id);
 			ResultSet rsProd = itemSt.executeQuery();
 			
 			if(rsProd.next()) {
@@ -79,7 +79,7 @@ public class MugQuery extends HttpServlet {
 		try {			
 			//Connection conn = DBConnect.initDB();
 			PreparedStatement imgSt = conn.prepareStatement("select * from Product_Images where product_id=?");
-			imgSt.setInt(1, 1);
+			imgSt.setInt(1, id);
 			ResultSet rsImg = imgSt.executeQuery();
 			
 			if(rsImg.next()) {
