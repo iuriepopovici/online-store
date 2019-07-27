@@ -22,16 +22,30 @@
    <div class="row store-featured text-center">
 
 <% 
+
+
 int totalItems = 0;
-int totalPrice = 0;
+double totalPrice = 0;
 
 String src = "";
 if(session.getAttribute("cart") != null) {
 	ArrayList<CartItem> cart = (ArrayList<CartItem>)session.getAttribute("cart");
+	
+	
+	// Remove cart item
+	if(request.getParameter("remove") != null){
+		int idx = Integer.parseInt(request.getParameter("remove"));
+		//CartItem ci = cart.get(idx);
+		cart.remove(idx);
+		response.sendRedirect("viewCart.jsp");
+	}
+	
+	
+	
 	for(int i=0; i < cart.size(); i++) {
 		if(cart != null && cart.get(i) != null) {
 			totalItems += cart.get(i).getNbItems();
-			totalPrice += cart.get(i).getItemPrice();
+			totalPrice += (cart.get(i).getItemPrice()*cart.get(i).getNbItems());
 			session.setAttribute("totalItems", totalItems);
 			src = "<img src = '"+cart.get(i).getImgSm()+"'>";
 %>		
@@ -52,9 +66,19 @@ if(session.getAttribute("cart") != null) {
                 	
                 	out.print("<a class='text-primary' href = "+itemLink+"><br/>View Item</a>");
                 %>             
-                <h4>Count: <%= cart.get(i).getNbItems() %></h4>
                 
-         		<h4>$<%= cart.get(i).getItemPrice() %></h4>
+         		<h4>$<%= cart.get(i).getItemPrice() %> per item</h4>
+         		
+         		<h4>Count: <%= cart.get(i).getNbItems() %></h4>
+         		
+     
+         		<form action="viewCart.jsp">
+         			<input type="hidden" name="remove" value="<%=i%>">
+         			<input type="submit" value="Remove">
+         		</form>
+         		
+       
+         			
          		
             </div>
         </div>
@@ -72,10 +96,18 @@ if(session.getAttribute("cart") != null) {
 <form action="checkout.jsp" id="Checkout">
 	<input type="hidden" name="total" value="<%= totalPrice %>">
 </form>
+<%
+	if(totalPrice != 0) {
+%>
 <div class="col-md-12 text-center">
 	<button class="btn-orange text-center" form="Checkout" type="submit" value="Checkout">Checkout</button>
 </div>
 <br />
+<%
+	}
+%>
+	
+
 <% } else { %>
 
 	<h4 class="col-md-12 text-center">Your shopping cart is empty!</h4>

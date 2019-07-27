@@ -68,27 +68,22 @@
     <div class="row store-featured text-center">
       <div class="col-md-4">
           <div class="text-center store-featured-item">
-            <h4><a href="item.jsp?value=Mug">Mug</a></h4>
-            <a href="item.jsp?value=Mug">
+            <h4>Mug</h4>
             <img src="img/merch/mug_logo_blue_128.png" alt="Paula's Porcupine Pagoda logo mug" width="128" height="128">
-            </a>
             <p>Pefect for your morning coffee!</p>
           </div>
       </div>
       <div class="col-md-4">
           <div class="text-center store-featured-item">
-            <h4><a href="item.jsp?value=T-Shirt">T-Shirt</a></h4>
-            <a href="item.jsp?value=T-Shirt">
+            <h4>T-Shirt</h4>
             <img src="img/merch/tshirt_logo_orange_128.png" alt="Paula's Porcupine Pagoda logo t-shirt" width="128" height="128">
-            </a>
             <p>Limited edition design!</p>
           </div>
       </div>
       <div class="col-md-4">
           <div class="text-center store-featured-item">
             
-            <h4><a href="item.jsp?value=Cap">Cap</a></h4>
-            <a href="item.jsp?value=Cap">
+            <h4>Cap</h4>
             <img src="img/merch/cap_logo_blue_128.png" alt="Paula's Porcupine Pagoda logo cap" width="128" height="128">
             </a>
             <p>Get your porcupine gear here!</p>
