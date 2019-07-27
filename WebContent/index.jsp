@@ -34,8 +34,9 @@
         <div class="why_choose_us">
           <h4>An exceptional experience...</h4>
           <img src="img/photo/sm_pagoda_236_177.jpg" alt="Pagoda image">
+          <br />
           <h6>Our certified employees provide the following services: </h6>
-          <h6>Acupuncture/Masage Session (90 minutes): $120 </h6>
+          <h6>Acupuncture/Massage Session (90 minutes): $120 </h6>
           <h6>Cupping (30 minutes): $45 </h6>
           <h6>Follow-Up Acupuncture Session (60 minutes): $80 </h6>
         </div>
@@ -62,28 +63,32 @@
 <br>
 	<div class="row">
     	<div class="col-md-12  text-center">
-      		<h1>Head to our online store for the following items:</h1>
+      		<h1><a href="/store.jsp">Head to our online store for the following items:</a></h1>
     	</div>
   	</div>
     <div class="row store-featured text-center">
       <div class="col-md-4">
           <div class="text-center store-featured-item">
             <h4>Mug</h4>
+            <a href="/mug">
             <img src="img/merch/mug_logo_blue_128.png" alt="Paula's Porcupine Pagoda logo mug" width="128" height="128">
-            <p>Pefect for your morning coffee!</p>
+            </a>
+            <p>Perfect for your morning coffee!</p>
           </div>
       </div>
       <div class="col-md-4">
           <div class="text-center store-featured-item">
             <h4>T-Shirt</h4>
+            <a href="/t_shirt">
             <img src="img/merch/tshirt_logo_orange_128.png" alt="Paula's Porcupine Pagoda logo t-shirt" width="128" height="128">
+            </a>
             <p>Limited edition design!</p>
           </div>
       </div>
       <div class="col-md-4">
-          <div class="text-center store-featured-item">
-            
+          <div class="text-center store-featured-item">            
             <h4>Cap</h4>
+            <a href="/cap">
             <img src="img/merch/cap_logo_blue_128.png" alt="Paula's Porcupine Pagoda logo cap" width="128" height="128">
             </a>
             <p>Get your porcupine gear here!</p>

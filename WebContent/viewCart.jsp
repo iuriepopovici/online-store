@@ -89,7 +89,7 @@ if(session.getAttribute("cart") != null) {
 	</div><!--  row  -->
 </div>			
 <br />
-<h4 class="col-md-12 text-center"> Nb of items in your cart so far: <%= totalItems %></h4>
+<h4 class="col-md-12 text-center"> Number of items in your cart so far: <%= totalItems %></h4>
 <br />
 <h4 class="col-md-12 text-center"> Total price: $<%= totalPrice %></h4>
 <br />

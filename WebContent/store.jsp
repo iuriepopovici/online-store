@@ -35,8 +35,9 @@
                 		<input type="hidden" name="src" value="img/merch/T-Shirt.png"/>
                 		<input type="submit" value="View Item">
                 	</form>
-	                <p>$25</p>
-                <p>Limited edition design!</p>
+                	<br />
+	                <p>$7.99</p>
+                	<p>Limited edition design!</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -49,8 +50,9 @@
                 		<input type="hidden" name="src" value="img/merch/Cap.png"/>
                 		<input type="submit" value="View Item">
                 	</form>
-	                <p>$15</p>
-                <p>Get your porcupine gear here!</p>
+	                <br />
+	                <p>$14.99</p>
+                	<p>Get your porcupine gear here!</p>
             </div>
           </div>
            <div class="col-md-4">
@@ -63,8 +65,8 @@
                 		<input type="hidden" name="src" value="img/merch/Mug.png"/>
                 		<input type="submit" value="View Item">
                 	</form>
-	                <p>$5</p>
-                <p>Perfect for your morning cofee!</p>
+	                <p>$12.99</p>
+                <p>Perfect for your morning coffee!</p>
             </div>
           </div>
       </div><!--  row  -->
