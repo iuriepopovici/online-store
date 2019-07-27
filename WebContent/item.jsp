@@ -68,9 +68,6 @@ availProds.add("T-Shirt");
     <form action="ProcessCart" method="post" id="addToCartForm">
 		<!-- <input type="hidden" name="product" value="${blueItem.itemId}"/> -->
     </form>
-    <form action="Checkout" method="post" id="buyForm">
-		<input type="hidden" name="product" value="${blueItem.itemId}" />
-    </form>
     
     <label>Color:</label>
     <select name="product" form="addToCartForm">
@@ -115,9 +112,8 @@ availProds.add("T-Shirt");
 	<br />
 	
     <button class="btn-orange" form="addToCartForm" type="submit" value="Add to cart">Add to cart</button>
-    <br /><br />
-    <button class="btn-orange" form="buyForm" type="submit" value="Add to cart">Buy now</button>
-   
+    <br />
+     
 </div>
   </div>
 </div>
