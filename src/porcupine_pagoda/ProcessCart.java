@@ -81,6 +81,7 @@ public class ProcessCart extends HttpServlet {
 					item.setNbItems(quantity);
 				}
 				itemSt.close();
+				queryImgs(productId, item, conn);
 				conn.close();
 				cart.add(item);
 			} catch (Exception e) {
@@ -92,6 +93,24 @@ public class ProcessCart extends HttpServlet {
 		
 		session.setAttribute("cart", cart);
 		request.getRequestDispatcher("viewCart.jsp").forward(request, response);
+	}
+	
+	protected void queryImgs(int id, CartItem item, Connection conn) {
+		try {			
+			PreparedStatement imgSt = conn.prepareStatement("select * from Product_Images where product_id=?");
+			imgSt.setInt(1, id);
+			ResultSet rsImg = imgSt.executeQuery();
+			
+			if(rsImg.next()) {
+				item.setImgSm(rsImg.getString("image_default_sm"));
+				item.setImgMd(rsImg.getString("image_default_md"));
+				item.setImgLg(rsImg.getString("image_default_lg"));
+			}
+			imgSt.close();
+		} catch (Exception e) {
+			System.err.println("Database Connection Failed");
+			e.printStackTrace();		
+		}
 	}
 	
 
