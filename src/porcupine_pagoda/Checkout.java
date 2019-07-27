@@ -51,6 +51,7 @@ public class Checkout extends HttpServlet {
 		String cc_num = request.getParameter("cc_num");
 		String cc_sec_code = request.getParameter("cc_sec_code");
 		String zipcode = request.getParameter("zipcode");
+		String expdate = request.getParameter("expdate");
 		HttpSession session = request.getSession();
 		
 		boolean reload = false;
@@ -117,10 +118,29 @@ public class Checkout extends HttpServlet {
 		}
 		
 		if(!isNullOrEmpty(cc_sec_code)) {
-			session.setAttribute("cc_sec_code", cc_sec_code);	
+			if(!isValidSecCode(cc_sec_code)) {
+				request.setAttribute("cc_sec_code_invalid", true);
+				reload = true;
+			}else {
+				session.setAttribute("cc_sec_code", cc_sec_code);	
+			}
 		} else {
 			request.setAttribute("cc_sec_code_empty", true);
-		}	
+			reload = true;
+		}
+		
+		if(!isNullOrEmpty(expdate)) {
+			if(!isValidExpdate(expdate)) {
+				request.setAttribute("expdate_invalid", true);
+				reload = true;
+			}else {
+				session.setAttribute("expdate", expdate);	
+			}
+		} else {
+			request.setAttribute("expdate_empty", true);
+			reload = true;
+		}
+		
 		
 		if (reload) {
 			request.getRequestDispatcher("checkout.jsp").forward(request, response);
@@ -167,5 +187,45 @@ public class Checkout extends HttpServlet {
         return false;
     }
 	
+	static boolean isValidSecCode(String cc_sec_code)
+	{
+		String regex = "^[0-9]{3}$";
+		Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(cc_sec_code);
+        
+        if(matcher.matches()){
+            return true;
+        }
+        return false;
+	}
+	
+	static boolean isValidExpdate(String expdate)
+	{
+		String dateStr = String.split(expdate, "-");
+		
+		expdate = expdate.replaceAll("-", "");
+		String regex = "^[0-9]{6}$";
+		Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(expdate);
+        
+        if(matcher.matches() && isYear(dateStr[0]) && isMonth(dateStr[1])){
+            return true;
+        }
+        return false;
+	}
+	
+	static boolean isMonth(String monthStr){
+		int month = Integer.parseInt(monthStr);
+		if(month >= 1 && month <=12)
+			return true;
+		else return false;
+	}
+	
+	static boolean isYear(String yearStr){
+		int year = Integer.parseInt(yearStr);
+		if(year >= 2019 && year <= 2050)
+			return true;
+		else return false;
+	}
 
 }
