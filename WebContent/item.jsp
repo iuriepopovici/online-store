@@ -42,28 +42,6 @@ else {
 }
 %>
 
-<!--  
-<div class="container-fluid">
-  <br>
-  <div class="row">
-    <div class="col-md-12  text-center">
-      <h1><%= product %></h1>
-      <img class="store_photo" src=<%= imgSrc %> alt=<%= imgAlt %>>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12  text-center">
-    <p><%= price %></p>
-    
-    <form action="ProcessCart" method="post" id="addToCartForm">
-		<input type="hidden" name="product" value=<%= product %> />
-    </form>
-    <form action="Checkout" method="post" id="buyForm">
-		<input type="hidden" name="product" value=<%= product %> />
-    </form>
-    
-    -->  
-
 <div class="container-fluid">
   <br>
   <div class="row">
@@ -117,6 +95,7 @@ else {
 	  <option value="10">10</option>
 	</select>
 	
+      
 	<div class="sizeOptions">
 	<label>Size:</label>
     <select name="size" form="addToCartForm">

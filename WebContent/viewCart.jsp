@@ -33,7 +33,7 @@ if(session.getAttribute("cart") != null) {
 			totalItems += cart.get(i).getNbItems();
 			totalPrice += cart.get(i).getItemPrice();
 			session.setAttribute("totalItems", totalItems);
-			src = "<img src = 'cart.get(i).getImgSm()'>";
+			src = "<img src = '"+cart.get(i).getImgSm()+"'>";
 %>		
 		
 
