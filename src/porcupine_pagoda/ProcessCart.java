@@ -82,7 +82,7 @@ public class ProcessCart extends HttpServlet {
 					
 					itemSt.close();
 					conn.close();
-					request.getRequestDispatcher("index.jsp").forward(request, response);
+					//request.getRequestDispatcher("index.jsp").forward(request, response);
 				}
 				cart.add(item);
 			} catch (Exception e) {
