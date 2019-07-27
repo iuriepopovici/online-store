@@ -26,20 +26,8 @@ availProds.add("Cap");
 availProds.add("Mug");
 availProds.add("T-Shirt");
 
-if(request.getParameter("product") != null && request.getParameter("price") != null){
-	if (availProds.contains(request.getParameter("product"))) {
-		product = request.getParameter("product");
-		price = request.getParameter("price");
-		imgSrc = "img/merch/" + product + ".png";
-		imgAlt = "Logo " + product;
-	}
-	else {
-		//response.sendRedirect("store.jsp");
-	} 
-} 
-else {
-	//response.sendRedirect("store.jsp");
-}
+//response.sendRedirect("store.jsp");
+
 %>
 
 <div class="container-fluid">
