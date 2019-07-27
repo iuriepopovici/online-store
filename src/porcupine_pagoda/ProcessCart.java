@@ -63,7 +63,7 @@ public class ProcessCart extends HttpServlet {
 		if(quantityPara != null) quantity = Integer.parseInt(quantityPara);
 		else quantity = 0;
 		
-		if(request.getParameter("size") != null) size = Integer.parseInt(quantityPara);
+		if(request.getParameter("size") != null) size = request.getParameter("size");
 		else size = "";
 		
 		
