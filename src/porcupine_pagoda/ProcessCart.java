@@ -12,7 +12,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import porcupine_pagoda.DBConnect; 
+import porcupine_pagoda.DBConnect;
 
 import porcupine_pagoda.CartItem;
 
@@ -22,7 +22,7 @@ import porcupine_pagoda.CartItem;
 @WebServlet("/ProcessCart")
 public class ProcessCart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -49,28 +49,29 @@ public class ProcessCart extends HttpServlet {
 		int productId = 1, quantity;
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(7200);
-		
+
 		List<CartItem> cart = (List<CartItem>)session.getAttribute("cart");
 		if(cart == null) {
 			cart = new ArrayList<CartItem>();
 		}
-		
+
 		if(productIdPara != null) productId = Integer.parseInt(productIdPara);
+
 		else productId = 0;
-		
+
 		if(quantityPara != null) quantity = Integer.parseInt(quantityPara);
 		else quantity = 0;
-		
+
 		if(productId >= 1 && productId <= 6)
 		{
 			try {
 				CartItem item = new CartItem();
-				
+
 				Connection conn = DBConnect.initDB();
 				PreparedStatement itemSt = conn.prepareStatement("select * from Product where product_id=?");
 				itemSt.setInt(1, productId);
 				ResultSet rsProd = itemSt.executeQuery();
-				
+
 				if(rsProd.next()) {
 					item.setItemName(rsProd.getString("product_name"));
 					item.setItemId(rsProd.getInt("product_id"));
@@ -86,21 +87,21 @@ public class ProcessCart extends HttpServlet {
 				cart.add(item);
 			} catch (Exception e) {
 				System.err.println("Database Connection Failed");
-				e.printStackTrace();		
+				e.printStackTrace();
 			}
 		}
 		//cart.add(new CartItem(product, 0, 1, 1));
-		
+
 		session.setAttribute("cart", cart);
 		request.getRequestDispatcher("viewCart.jsp").forward(request, response);
 	}
-	
+
 	protected void queryImgs(int id, CartItem item, Connection conn) {
-		try {			
+		try {
 			PreparedStatement imgSt = conn.prepareStatement("select * from Product_Images where product_id=?");
 			imgSt.setInt(1, id);
 			ResultSet rsImg = imgSt.executeQuery();
-			
+
 			if(rsImg.next()) {
 				item.setImgSm(rsImg.getString("image_default_sm"));
 				item.setImgMd(rsImg.getString("image_default_md"));
@@ -109,9 +110,9 @@ public class ProcessCart extends HttpServlet {
 			imgSt.close();
 		} catch (Exception e) {
 			System.err.println("Database Connection Failed");
-			e.printStackTrace();		
+			e.printStackTrace();
 		}
 	}
-	
+
 
 }

@@ -97,16 +97,16 @@ else {
 	
       
 	<div class="sizeOptions">
-	<label>Size:</label>
-    <select name="size" form="addToCartForm">
-      <option value="xsm">X-Small</option>
-	  <option value="sm">Small</option>
-	  <option value="md">Medium</option>
-	  <option value="lg">Large</option>
-	  <option value="xlg">X-Large</option>
-	  <option value="xxlg">XX-Large</option>
-	  <option value="3xlg">3X-Large</option>
-	</select>
+		<label>Size:</label>
+	    <select name="size" form="addToCartForm">
+	      <option value="xsm">X-Small</option>
+		  <option value="sm">Small</option>
+		  <option value="md">Medium</option>
+		  <option value="lg">Large</option>
+		  <option value="xlg">X-Large</option>
+		  <option value="xxlg">XX-Large</option>
+		  <option value="3xlg">3X-Large</option>
+		</select>
 	</div>
 	
 	

@@ -29,7 +29,7 @@
            <div class="store-featured-item">
                 <h4>T-Shirt</h4>
                     <img src="img/merch/T-Shirt.png" alt="logo t-shirt" width="128" height="128">
-                	<form action="item.jsp" method="post">
+                	<form action="./t_shirt" method="post">
                 		<input type="hidden" name="product" value="T-Shirt"/>
                 		<input type="hidden" name="price" value="$25"/>
                 		<input type="hidden" name="src" value="img/merch/T-Shirt.png"/>
@@ -43,7 +43,7 @@
            <div class="store-featured-item">
                 <h4>Cap</h4>
                     <img src="img/merch/Cap.png" alt="logo cap" width="128" height="128">
-                	<form action="item.jsp" method="post">
+                	<form action="./cap" method="post">
                 		<input type="hidden" name="product" value="Cap"/>
                 		<input type="hidden" name="price" value="$15"/>
                 		<input type="hidden" name="src" value="img/merch/Cap.png"/>
@@ -57,7 +57,7 @@
            	  <div class="store-featured-item">
                 <h4>Mug</h4>
                     <img src="img/merch/Mug.png" alt="logo t-shirt" width="128" height="128">
-                	<form action="item.jsp" method="post">
+                	<form action="./mug" method="post">
                 		<input type="hidden" name="product" value="Mug"/>
                 		<input type="hidden" name="price" value="$5"/>
                 		<input type="hidden" name="src" value="img/merch/Mug.png"/>
