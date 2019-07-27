@@ -150,3 +150,11 @@ input[type="search"], textarea{
    position: absolute;
    margin-left: -10px;
 }
+
+.imageTable, .imageTable th, .imageTable td{
+  border: none
+}
+
+.sizeOptions{
+  display: none;
+}

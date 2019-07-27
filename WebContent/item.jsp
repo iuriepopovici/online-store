@@ -42,24 +42,6 @@ else {
 }
 %>
 
-<div class="container-fluid">
-  <br>
-  <div class="row">
-    <div class="col-md-12  text-center">
-      <h1>${blueItem.itemName}</h1>
-      <img class="store_photo" src="${blueItem.imgMd}" alt="${blueItem.itemName}">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12  text-center">
-    <p>${blueItem.itemPrice}</p>
-    
-    <form action="ProcessCart" method="post" id="addToCartForm">
-		<input type="hidden" name="product" value="${blueItem.itemId}"/>
-    </form>
-    <form action="Checkout" method="post" id="buyForm">
-		<input type="hidden" name="product" value="${blueItem.itemId}" />
-    </form>
 <!--  
 <div class="container-fluid">
   <br>
@@ -81,6 +63,45 @@ else {
     </form>
     
     -->  
+
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-md-12  text-center">
+      <h1>${blueItem.itemName}</h1>
+      <img class="store_photo" src="${blueItem.imgMd}" alt="${blueItem.itemName}">
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-md-4 offset-md-4 text-center">
+	  	<table class="imageTable">
+			<tr>
+			<td> 
+				<img class="store_preview" id="previewBlue" src="${blueItem.imgSm}" alt="${blueItem.itemName} preview">
+			</td>
+			<td> 
+				<img class="store_preview" id="previewOrange" src="${orangeItem.imgSm}" alt="${orangeItem.itemName} preview">
+			</td>
+	  	 	</tr>
+	  	</table> 		 		
+  	</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12  text-center">
+    <p id="itemPrice">${blueItem.itemPrice}</p>
+    
+    <form action="ProcessCart" method="post" id="addToCartForm">
+		<!-- <input type="hidden" name="product" value="${blueItem.itemId}"/> -->
+    </form>
+    <form action="Checkout" method="post" id="buyForm">
+		<input type="hidden" name="product" value="${blueItem.itemId}" />
+    </form>
+    
+    <label>Color:</label>
+    <select name="product" form="addToCartForm">
+	  <option value="${blueItem.itemId}">${blueItem.color}</option>
+	  <option value="${orangeItem.itemId}">${orangeItem.color}</option>
+	</select>
     
     <label>Quantity:</label>
     <select name="quantity" form="addToCartForm">
@@ -94,6 +115,17 @@ else {
 	  <option value="8">8</option>
 	  <option value="9">9</option>
 	  <option value="10">10</option>
+	</select>
+	
+	<label>Size:</label>
+    <select name="size" form="addToCartForm">
+      <option value="xsm">X-Small</option>
+	  <option value="sm">Small</option>
+	  <option value="md">Medium</option>
+	  <option value="lg">Large</option>
+	  <option value="xlg">X-Large</option>
+	  <option value="xxlg">XX-Large</option>
+	  <option value="3xlg">3X-Large</option>
 	</select>
 	
 	<br />
