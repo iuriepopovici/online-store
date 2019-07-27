@@ -95,20 +95,22 @@ else {
 	  <option value="10">10</option>
 	</select>
 	
-      
-	<div class="sizeOptions">
-		<label>Size:</label>
-	    <select name="size" form="addToCartForm">
-	      <option value="xsm">X-Small</option>
-		  <option value="sm">Small</option>
-		  <option value="md">Medium</option>
-		  <option value="lg">Large</option>
-		  <option value="xlg">X-Large</option>
-		  <option value="xxlg">XX-Large</option>
-		  <option value="3xlg">3X-Large</option>
-		</select>
-	</div>
 	
+	<c:set var = "type" scope = "page" value = "T-Shirt"/>
+      <c:if type = "${blueItem.itemName}">
+         <div class="sizeOptions">
+			<label>Size:</label>
+		    <select name="size" form="addToCartForm">
+		      <option value="xsm">X-Small</option>
+			  <option value="sm">Small</option>
+			  <option value="md">Medium</option>
+			  <option value="lg">Large</option>
+			  <option value="xlg">X-Large</option>
+			  <option value="xxlg">XX-Large</option>
+			  <option value="3xlg">3X-Large</option>
+			</select>
+		</div>
+    </c:if>
 	
 	<br />
 	<br />
