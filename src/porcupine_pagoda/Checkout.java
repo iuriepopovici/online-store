@@ -104,12 +104,16 @@ public class Checkout extends HttpServlet {
 			session.setAttribute("zipcode", zipcode);
 		}	
 		
-		if(isNullOrEmpty(cc_num)) {
+		if(!isNullOrEmpty(cc_num)) {
+			if(!isValidCCnum(cc_num)) {
+				request.setAttribute("cc_num_invalid", true);
+				reload = true;
+			}else {
+				session.setAttribute("cc_num", cc_num);	
+			}
+		} else {
 			request.setAttribute("cc_num_empty", true);
 			reload = true;
-			
-		} else {
-			session.setAttribute("cc_num", cc_num);	
 		}
 		
 		if(!isNullOrEmpty(cc_sec_code)) {
@@ -143,6 +147,25 @@ public class Checkout extends HttpServlet {
         return nullOrEmpty;
     }
 	
+	static boolean isValidCCnum(String cc_num) {
+		cc_num = cc_num.replaceAll("-", "");
+		cc_num = cc_num.replaceAll(" ", "");
+        
+        String regex = "^(?:(?<visa>4[0-9]{12}(?:[0-9]{3})?)|" +
+                "(?<mastercard>5[1-5][0-9]{14})|" +
+                "(?<discover>6(?:011|5[0-9]{2})[0-9]{12})|" +
+                "(?<amex>3[47][0-9]{13})|" +
+                "(?<diners>3(?:0[0-5]|[68][0-9])?[0-9]{11})|" +
+                "(?<jcb>(?:2131|1800|35[0-9]{3})[0-9]{11}))$";
+        
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(cc_num);
+        
+        if(matcher.matches()){
+            return true;
+        }
+        return false;
+    }
 	
 
 }
