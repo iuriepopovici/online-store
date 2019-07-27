@@ -201,7 +201,7 @@ public class Checkout extends HttpServlet {
 	
 	static boolean isValidExpdate(String expdate)
 	{
-		String dateStr = String.split(expdate, "-");
+		String[] dateStr = expdate.split("-");
 		
 		expdate = expdate.replaceAll("-", "");
 		String regex = "^[0-9]{6}$";

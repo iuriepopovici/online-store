@@ -40,12 +40,20 @@ if (request.getAttribute("cc_num_invalid") != null) {
 	message = "<div class='alert alert-danger'>Please enter a valid credit card number!</div>";
 } 
 
-if (request.getAttribute("cc_sec_code") != null) {
+if (request.getAttribute("cc_sec_code_empty") != null) {
 	message = "<div class='alert alert-danger'>Please enter your credit card security code number!</div>";
 }
 
-if (request.getAttribute("expdate") != null) {
+if (request.getAttribute("cc_sec_code_invalid") != null) {
+	message = "<div class='alert alert-danger'>Please enter your credit card security code number!</div>";
+}
+
+if (request.getAttribute("expdate_invalid") != null) {
 	message = "<div class='alert alert-danger'>Please enter a valid expiration date!</div>";
+}
+
+if (request.getAttribute("expdate_empty") != null) {
+	message = "<div class='alert alert-danger'>Please enter an expiration date!</div>";
 }
 
 if (request.getAttribute("address_empty") != null) {
