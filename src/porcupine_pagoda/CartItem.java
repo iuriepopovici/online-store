@@ -10,6 +10,7 @@ public class CartItem {
 	private double weight;
 	private String color;
 	private String imgSm, imgMd, imgLg;
+	private String size;
 	
 	public CartItem() {
 		this.itemName = "Product";
@@ -114,5 +115,15 @@ public class CartItem {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+	
+	
 	
 }

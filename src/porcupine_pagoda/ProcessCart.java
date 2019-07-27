@@ -46,6 +46,7 @@ public class ProcessCart extends HttpServlet {
 		response.setContentType("text/html");
 		String productIdPara = request.getParameter("product");
 		String quantityPara = request.getParameter("quantity");
+		String size;
 		int productId = 1, quantity;
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(7200);
@@ -61,6 +62,11 @@ public class ProcessCart extends HttpServlet {
 
 		if(quantityPara != null) quantity = Integer.parseInt(quantityPara);
 		else quantity = 0;
+		
+		if(request.getParameter("size") != null) size = Integer.parseInt(quantityPara);
+		else size = "";
+		
+		
 
 		if(productId >= 1 && productId <= 6)
 		{
@@ -80,6 +86,7 @@ public class ProcessCart extends HttpServlet {
 					item.setSku(rsProd.getString("product_sku"));
 					item.setWeight(rsProd.getDouble("product_weight"));
 					item.setNbItems(quantity);
+					item.setSize(size);
 				}
 				itemSt.close();
 				queryImgs(productId, item, conn);
