@@ -20,9 +20,9 @@ public class CartItem {
 		this.sku = "000000";
 		this.weight = 0.0;
 		this.color = "clear";
-		this.imgSm = "img/merch/notAvail.png";
-		this.imgMd = "img/merch/notAvail.png";
-		this.imgLg = "img/merch/notAvail.png";
+		this.imgSm = "img/merch/notAvail_128.png";
+		this.imgMd = "img/merch/notAvail_256.png";
+		this.imgLg = "img/merch/notAvail_720.png";
 	}
 	
 	public CartItem(String itemName, int itemId, int nbItems, double itemPrice) {
@@ -30,9 +30,9 @@ public class CartItem {
 		this.itemId = itemId;
 		this.nbItems = nbItems;
 		this.itemPrice = itemPrice;
-		this.imgSm = "img/merch/notAvail.png";
-		this.imgMd = "img/merch/notAvail.png";
-		this.imgLg = "img/merch/notAvail.png";
+		this.imgSm = "img/merch/notAvail_128.png";
+		this.imgMd = "img/merch/notAvail_256.png";
+		this.imgLg = "img/merch/notAvail_720.png";
 	}
 	
 	public String getItemName() {

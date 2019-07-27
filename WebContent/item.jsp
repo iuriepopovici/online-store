@@ -117,6 +117,7 @@ else {
 	  <option value="10">10</option>
 	</select>
 	
+	<div class="sizeOptions">
 	<label>Size:</label>
     <select name="size" form="addToCartForm">
       <option value="xsm">X-Small</option>
@@ -127,6 +128,8 @@ else {
 	  <option value="xxlg">XX-Large</option>
 	  <option value="3xlg">3X-Large</option>
 	</select>
+	</div>
+	
 	
 	<br />
 	<br />

@@ -21,9 +21,9 @@ public class ProductData {
 		this.sku = "000000";
 		this.weight = 0.0;
 		this.color = "clear";
-		this.imgSm = "img/merch/notAvail.png";
-		this.imgMd = "img/merch/notAvail.png";
-		this.imgLg = "img/merch/notAvail.png";
+		this.imgSm = "img/merch/notAvail_128.png";
+		this.imgMd = "img/merch/notAvail_256.png";
+		this.imgLg = "img/merch/notAvail_720.png";
 	}
 	
 	public String getItemName() {
