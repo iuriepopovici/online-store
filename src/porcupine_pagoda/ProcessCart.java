@@ -56,10 +56,8 @@ public class ProcessCart extends HttpServlet {
 		}
 		
 		if(productIdPara != null) productId = Integer.parseInt(productIdPara);
-
 		if(quantityPara != null) quantity = Integer.parseInt(quantityPara);
 		else quantity = 0;
-
 		
 		if(productId >= 1 && productId <= 6)
 		{
