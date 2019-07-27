@@ -50,66 +50,79 @@ public class Checkout extends HttpServlet {
 		String address = request.getParameter("address");
 		String cc_num = request.getParameter("cc_num");
 		String cc_sec_code = request.getParameter("cc_sec_code");
+		String zipcode = request.getParameter("zipcode");
 		HttpSession session = request.getSession();
 		
-		
+		boolean reload = false;
 		
 		if(!isNullOrEmpty(first_name)) {
 			session.setAttribute("first_name", first_name);	
 		} else {
 			request.setAttribute("first_name_empty", true);
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			reload = true;
 		}
 		
 		if(!isNullOrEmpty(last_name)) {
 			session.setAttribute("last_name", last_name);	
 		} else {
 			request.setAttribute("last_name_empty", true);
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			reload = true;
 		}
 		
 		if(!isNullOrEmpty(phone)) {
 			session.setAttribute("phone", phone);	
 		} else {
 			request.setAttribute("phone_empty", true);
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			reload = true;
 		}
 		
 		if(!isNullOrEmpty(email)) {
 			if(!isValidEmail(email)) {
 				request.setAttribute("email_invalid", true);
-				request.getRequestDispatcher("checkout.jsp").forward(request, response);
+				reload = true;
 			}else {
 			session.setAttribute("email", email);	
 			}
 		} else {
 			request.setAttribute("email_empty", true);
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			reload = true;
 		}
-		
 		
 		
 		if(!isNullOrEmpty(address)) {
 			session.setAttribute("address", address);	
 		} else {
 			request.setAttribute("address_empty", true);
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			reload = true;
 		}
-		if(!isNullOrEmpty(cc_num)) {
-			session.setAttribute("cc_num", cc_num);	
+		
+		if(isNullOrEmpty(zipcode)) {
+			request.setAttribute("zipcode_empty", true);
+			reload = true;
+				
 		} else {
+			session.setAttribute("zipcode", zipcode);
+		}	
+		
+		if(isNullOrEmpty(cc_num)) {
 			request.setAttribute("cc_num_empty", true);
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			reload = true;
+			
+		} else {
+			session.setAttribute("cc_num", cc_num);	
 		}
 		
 		if(!isNullOrEmpty(cc_sec_code)) {
 			session.setAttribute("cc_sec_code", cc_sec_code);	
 		} else {
 			request.setAttribute("cc_sec_code_empty", true);
+		}	
+		
+		if (reload) {
 			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+		} else {
+			request.getRequestDispatcher("successCheckout.jsp").forward(request, response);
 		}
-			
-								
 	
 	}
 	
