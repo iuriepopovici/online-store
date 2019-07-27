@@ -36,17 +36,24 @@ if(session.getAttribute("cart") != null) {
 			src = "<img src = '"+cart.get(i).getImgSm()+"'>";
 %>		
 		
-
          <div class="col-md-3">
             <div class="store-featured-item">
                 <h4><%= cart.get(i).getItemName() %></h4>
+                <h4><%= cart.get(i).getColor() %></h4>
                 <% out.println(src); %>
-                <form action="item.jsp" method="post">
-         			<input type="hidden" name="product" value="<%= cart.get(i).getItemName() %>"/>
-         			<input type="hidden" name="price" value="<%= cart.get(i).getItemPrice() %>"/>
-         		
-         			<input type="submit" value="View Item">
-         		</form>
+                
+                <%
+                	String itemLink;
+                	if(cart.get(i).getItemId == 1 || cart.get(i).getItemId == 2)
+                		itemLink = "/t_shirt";
+                	else if (cart.get(i).getItemId == 1 || cart.get(i).getItemId == 2)
+                		itemLink = "/cap";
+                	else
+                		itemLink = "/mug";   
+                	
+                	out.print("<a href = "+itemLink+">View Item</a>");
+                %>             
+                <h4>Count: <%= cart.get(i).getNbItems() %></h4>
          		<h4>$<%= cart.get(i).getItemPrice() %></h4>
          		
             </div>
