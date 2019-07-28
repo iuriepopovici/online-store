@@ -23,6 +23,7 @@ String address = "";
 String zipcode = "";
 String cc_num = "";
 String cc_sec_code = "";
+String expdate = "";
 
 if (request.getAttribute("email_empty") != null || request.getAttribute("email_invalid") != null) {
 	message = "<div class='alert alert-danger'>Please enter a valid email address!</div>";
@@ -45,7 +46,7 @@ if (request.getAttribute("cc_sec_code_empty") != null) {
 }
 
 if (request.getAttribute("cc_sec_code_invalid") != null) {
-	message = "<div class='alert alert-danger'>Please enter your credit card security code number!</div>";
+	message = "<div class='alert alert-danger'>Please enter a valid credit card security code number!</div>";
 }
 
 if (request.getAttribute("expdate_invalid") != null) {
@@ -99,6 +100,9 @@ if (request.getParameter("cc_num")!= null) {
 if (request.getParameter("cc_sec_code")!= null) {
 	cc_sec_code = request.getParameter("cc_sec_code");
 }
+if (request.getParameter("expdate")!= null) {
+	expdate = request.getParameter("expdate");
+}
 %>
 
 <jsp:include page="include/header.jsp" />
@@ -132,6 +136,7 @@ if (request.getParameter("cc_sec_code")!= null) {
         <br>
         <% }%>
         <h3>Shipping Information</h3>
+        <p>All fields required!</p>
         <%= message %>
         
         <table>
@@ -175,7 +180,7 @@ if (request.getParameter("cc_sec_code")!= null) {
           </tr>
           <tr>
             <td>Expiration Date:</td>
-			<td><input type="month" name="expir_date" min="2019-07"></td>
+			<td><input type="month" name="expir_date" min="2019-07" value="<%= expdate %>"></td>
         </table>
         
         <br>

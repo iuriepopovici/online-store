@@ -129,18 +129,6 @@ public class Checkout extends HttpServlet {
 			reload = true;
 		}
 		
-		if(!isNullOrEmpty(expdate)) {
-			if(!isValidExpdate(expdate)) {
-				request.setAttribute("expdate_invalid", true);
-				reload = true;
-			}else {
-				session.setAttribute("expdate", expdate);	
-			}
-		} else {
-			request.setAttribute("expdate_empty", true);
-			reload = true;
-		}
-		
 		
 		if (reload) {
 			request.getRequestDispatcher("checkout.jsp").forward(request, response);

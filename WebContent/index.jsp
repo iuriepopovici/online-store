@@ -24,7 +24,7 @@
       <a href="registration.jsp">
       	  <button class="btn-orange" type="submit">REGISTER</button>
       </a>
-      <p>Register and get a discount code via email!</p>
+      <h2>Register and get a discount code via email!</h2>
       <% } %>
     </div>
   </div>
