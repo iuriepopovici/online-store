@@ -19,8 +19,3 @@
 
 &nbsp;&nbsp;&nbsp;
 
-<img width="1440" alt="Screen Shot 2019-10-12 at 4 35 04 PM" src="https://user-images.githubusercontent.com/19762832/67256211-8570d680-f44b-11e9-8910-2b558743ce03.png">
-
-
-&nbsp;&nbsp;&nbsp;
-
