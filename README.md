@@ -1,4 +1,4 @@
-# Online Store
+# Online Store [Academic Project]
 
 A website and online store developed using Java, J2EE, Apache Tomcat, and Eclipse IDE. Users can register, sign in, and purchase goods. Visitors do not have to be logged in to buy. They can place the items in the cart and checkout when ready.
 
