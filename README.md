@@ -22,3 +22,7 @@ A website and online store developed using Java, J2EE, Apache Tomcat, and Eclips
 
 &nbsp;&nbsp;&nbsp;
 
+## Authors
+
+* **Iurie Popovici**  - *Initial work* - 
+* **Armando Gonzalez**  - *Initial work* - 
