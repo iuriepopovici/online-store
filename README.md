@@ -28,12 +28,12 @@ To run the project locally you will need to download and install Eclipse and Apa
 ### How to run the project
 * Clone the repository to your local machine:
 `git clone https://github.com/iuriepopovici/online-store`
-* Find and replace the placeholders in `online-store/src/porcupine_pagoda/DBConnect.java`:
-[DATABASE_USER], [DATABASE_PASSWORD], and [DATABASE_URL].
+* Find and replace the placeholders in `online-store/src/porcupine_pagoda/DBConnect.java`: <br />
+[DATABASE_USER], [DATABASE_PASSWORD], and [DATABASE_URL] <br />
 This step is necessary to establish a database connection.
 * Start the MySQL server
-* In Eclipse Navigator, rigth-click on the Project Folder:
-  Run As -> Run On Server
+* In Eclipse Navigator, rigth-click on the Project Folder:<br />
+  Run As -> Run On Server <br />
   Follow the instructions in Eclipse to create a Tomcat v9 server
 * Visit [http://localhost:8080/paulas_porcupine_pagoda/](http://localhost:8080/paulas_porcupine_pagoda/) in your web browser to view the app.
 
