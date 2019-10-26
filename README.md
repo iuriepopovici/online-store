@@ -25,10 +25,6 @@ A website and online store developed using Java, J2EE, Apache Tomcat, and Eclips
 ### Prerequisites
 To run the project locally you will need to download and install Eclipse and Apache Tomcat 9. Use Java 11. You also need to connect to a MySQL database. Download and install the MySQL 5.7 server on your machine.
 
-Find and replace the placeholders in `online-store/src/porcupine_pagoda/DBConnect.java`:
-
-[DATABASE_USER], [DATABASE_PASSWORD], and [DATABASE_URL]
-
 ### How to run the project
 * Clone the repository to your local machine:
 `git clone https://github.com/iuriepopovici/online-store`
