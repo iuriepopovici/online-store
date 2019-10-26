@@ -3,7 +3,6 @@ package porcupine_pagoda;
 import java.sql.*;
 
 // Replace [DATABASE_USER], [DATABASE_PASSWORD], and [DATABASE_URL] with your DB credentials and URL
-        String dbURL = "[DATABASE_URL]";
 public class DBConnect {
     protected static Connection initDB() throws SQLException, ClassNotFoundException {
         String driver = "com.mysql.cj.jdbc.Driver";
