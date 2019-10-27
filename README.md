@@ -1,6 +1,6 @@
 # Online Store [Academic Project]
 
-A website and online store developed using Java, J2EE, Apache Tomcat, and Eclipse IDE. All data is stored in a MySQL database. Users can register, sign in, and purchase goods. They can place items in the cart and checkout when ready. Visitors do not have to be logged in to buy items.
+A website and online store developed using Java, J2EE, Apache Tomcat, and Eclipse IDE. All data is stored in a MySQL database. Users can register, sign in, and purchase goods. They can place items in the cart and checkout when ready. Visitors do not have to be logged in to buy items. The website was built using responsive web design techniques.
 
 <img width="1440" alt="Screen Shot 2019-10-12 at 4 30 22 PM" src="https://user-images.githubusercontent.com/19762832/67256207-8570d680-f44b-11e9-8c60-f0825b8c7472.png">
 
