@@ -34,7 +34,7 @@ This step is necessary to establish a database connection.
 * Start the MySQL server
 * In Eclipse Navigator, rigth-click on the Project Folder:<br />
   Run As -> Run On Server <br />
-  Follow the instructions in Eclipse to create a Tomcat v9 server
+  Follow the instructions in Eclipse to create and start a Tomcat v9 server
 * Visit [http://localhost:8080/paulas_porcupine_pagoda/](http://localhost:8080/paulas_porcupine_pagoda/) in your web browser to view the app.
 
 
